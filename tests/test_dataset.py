@@ -1,10 +1,11 @@
 from pathlib import Path
 import json
 import tempfile
-
+import sys
+import os
 from PIL import Image
-import torch
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.dataset import MILDataset, mil_transform
 
 
@@ -36,3 +37,7 @@ def test_dataset_load():
         assert bag.shape[0] == 2  # two patches
         assert label.item() == 1
         assert bag_id == "bag1"
+
+if __name__ == "__main__":
+    test_dataset_load()
+    print("Dataset test passed!")
