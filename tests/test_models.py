@@ -47,8 +47,9 @@ def test_model_forward_maxpool():
     with tempfile.TemporaryDirectory() as tmp:
         bag, label = create_dummy_dataset(Path(tmp))
         model = MaxPoolMIL(pretrained=False)
-        out = model(bag)
+        out, patch_scores = model(bag)
         assert out.shape == label.shape
+        assert patch_scores.shape[1] == bag.shape[1]
 
 # Run tests
 if __name__ == "__main__":

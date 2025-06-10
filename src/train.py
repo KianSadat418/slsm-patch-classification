@@ -20,11 +20,15 @@ def get_args():
     parser.add_argument("--batch-size", type=int, default=1)
     parser.add_argument("--lr", type=float, default=1e-4)
     parser.add_argument("--output", type=Path, default=Path("model.pt"))
+    parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu",
+                        help="Device to train on")
     return parser.parse_args()
 
 
 def main():
     args = get_args()
+
+    device = torch.device(args.device)
 
     dataset = MILDataset(
         args.bags,
@@ -39,13 +43,17 @@ def main():
         model = AttentionMIL(pretrained=False)
     else:
         model = MaxPoolMIL(pretrained=False)
+    model.to(device)
     model.train()
 
     criterion = torch.nn.BCELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
 
+    print(f"Training on {device} for {args.epochs} epochs")
     for epoch in range(args.epochs):
         for bags, labels, _ in loader:
+            bags = bags.to(device)
+            labels = labels.to(device)
             outputs, *_ = model(bags)
             loss = criterion(outputs, labels)
             optimizer.zero_grad()
