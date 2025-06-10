@@ -22,7 +22,11 @@ class MaxPoolMIL(nn.Module):
         features = self.feature_extractor(x)
         features = features.view(B, N, self.embedding_dim)
 
-        pooled, _ = torch.max(features, dim=1)
+        # Patch-level scores
+        patch_scores = self.classifier(features).squeeze(-1)  # (B, N)
 
-        output = self.classifier(pooled)
-        return output.squeeze(1)
+        # Bag prediction via max pooling over patch embeddings
+        pooled, _ = torch.max(features, dim=1)
+        bag_logits = self.classifier(pooled).squeeze(1)
+
+        return bag_logits, patch_scores
