@@ -38,6 +38,7 @@ def test_dataset_load():
         assert label.item() == 1
         assert bag_id == "bag1"
 
+# Run tests
 if __name__ == "__main__":
     test_dataset_load()
     print("Dataset test passed!")

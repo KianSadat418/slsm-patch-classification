@@ -1,10 +1,13 @@
 from pathlib import Path
 import json
 import tempfile
+import sys
+import os
 
 from PIL import Image
 import torch
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.dataset import MILDataset, mil_transform
 from src.model_attention import AttentionMIL
 from src.model_maxpool import MaxPoolMIL
@@ -46,3 +49,10 @@ def test_model_forward_maxpool():
         model = MaxPoolMIL(pretrained=False)
         out = model(bag)
         assert out.shape == label.shape
+
+# Run tests
+if __name__ == "__main__":
+    test_model_forward_attention()
+    print("AttentionMIL test passed.")
+    test_model_forward_maxpool()
+    print("MaxPoolMIL test passed.")
