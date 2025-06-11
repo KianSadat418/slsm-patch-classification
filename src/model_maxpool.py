@@ -3,7 +3,7 @@ import torch.nn as nn
 import torchvision.models as models
 
 class MaxPoolMIL(nn.Module):
-    def __init__(self, pretrained=True):
+    def __init__(self, pretrained=True, dropout=0.5):
         super(MaxPoolMIL, self).__init__()
 
         backbone = models.resnet18(pretrained=pretrained)
@@ -11,6 +11,7 @@ class MaxPoolMIL(nn.Module):
 
         self.embedding_dim = 512
         self.classifier = nn.Sequential(
+            nn.Dropout(dropout),
             nn.Linear(self.embedding_dim, 1),
             nn.Sigmoid()
         )

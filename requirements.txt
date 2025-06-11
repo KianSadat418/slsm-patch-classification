@@ -4,6 +4,9 @@ torchvision==0.17.0
 pandas
 Pillow
 numpy<2
+scikit-learn
+matplotlib
+
 
 # Development
 pytest
