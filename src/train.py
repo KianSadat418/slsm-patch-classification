@@ -5,7 +5,7 @@ import json
 import torch
 from torch.utils.data import DataLoader
 
-from dataset import MILDataset, mil_transform
+from dataset import MILDataset, mil_transform, mil_collate
 from model_attention import AttentionMIL
 from model_maxpool import MaxPoolMIL
 
@@ -54,8 +54,13 @@ def main():
         transform=mil_transform,
     )
 
-    train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True)
-    val_loader = DataLoader(val_ds, batch_size=1)
+    train_loader = DataLoader(
+        train_ds,
+        batch_size=args.batch_size,
+        shuffle=True,
+        collate_fn=mil_collate,
+    )
+    val_loader = DataLoader(val_ds, batch_size=1, collate_fn=mil_collate)
 
     if args.model == "attention":
         model = AttentionMIL(pretrained=False, dropout=args.dropout)
@@ -81,16 +86,17 @@ def main():
         preds = []
         labels_list = []
         for bags, labels, _ in train_loader:
-            bags = bags.to(device)
-            labels = labels.to(device)
-            outputs, _ = model(bags)
-            loss = criterion(outputs, labels)
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-            epoch_losses.append(loss.item())
-            preds.extend(outputs.detach().cpu().tolist())
-            labels_list.extend(labels.cpu().tolist())
+            for bag, label in zip(bags, labels):
+                bag = bag.unsqueeze(0).to(device)
+                label = label.unsqueeze(0).to(device)
+                outputs, _ = model(bag)
+                loss = criterion(outputs, label)
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
+                epoch_losses.append(loss.item())
+                preds.extend(outputs.detach().cpu().tolist())
+                labels_list.extend(label.cpu().tolist())
         train_loss = sum(epoch_losses) / len(epoch_losses)
         try:
             train_auc = roc_auc_score(labels_list, preds)
@@ -103,13 +109,14 @@ def main():
         val_labels = []
         with torch.no_grad():
             for bags, labels, _ in val_loader:
-                bags = bags.to(device)
-                labels = labels.to(device)
-                outputs, _ = model(bags)
-                loss = criterion(outputs, labels)
-                val_epoch_losses.append(loss.item())
-                val_preds.extend(outputs.cpu().tolist())
-                val_labels.extend(labels.cpu().tolist())
+                for bag, label in zip(bags, labels):
+                    bag = bag.unsqueeze(0).to(device)
+                    label = label.unsqueeze(0).to(device)
+                    outputs, _ = model(bag)
+                    loss = criterion(outputs, label)
+                    val_epoch_losses.append(loss.item())
+                    val_preds.extend(outputs.cpu().tolist())
+                    val_labels.extend(label.cpu().tolist())
         val_loss = sum(val_epoch_losses) / len(val_epoch_losses)
         try:
             val_auc = roc_auc_score(val_labels, val_preds)

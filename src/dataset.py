@@ -42,3 +42,10 @@ mil_transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.5]*3, std=[0.5]*3),
 ])
+
+
+def mil_collate(batch):
+    """Custom collate_fn to handle bags with different numbers of patches."""
+    bags, labels, bag_ids = zip(*batch)
+    labels = torch.stack(labels)
+    return list(bags), labels, list(bag_ids)
