@@ -19,39 +19,122 @@ def get_args():
     parser.add_argument("--epochs", type=int, default=1)
     parser.add_argument("--batch-size", type=int, default=1)
     parser.add_argument("--lr", type=float, default=1e-4)
+    parser.add_argument("--weight-decay", type=float, default=1e-5)
+    parser.add_argument("--dropout", type=float, default=0.5)
+    parser.add_argument("--plot-loss", type=Path, help="Optional path to save loss curve plot")
     parser.add_argument("--output", type=Path, default=Path("model.pt"))
+    parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu",
+                        help="Device to train on")
     return parser.parse_args()
 
 
 def main():
     args = get_args()
 
-    dataset = MILDataset(
+    device = torch.device(args.device)
+
+    import json
+    with open(args.folds, "r") as f:
+        fold_map = json.load(f)
+    all_folds = set(fold_map.values())
+    train_folds = [f for f in all_folds if f != args.fold]
+
+    train_ds = MILDataset(
+        args.bags,
+        args.labels,
+        args.folds,
+        train_folds,
+        transform=mil_transform,
+    )
+    val_ds = MILDataset(
         args.bags,
         args.labels,
         args.folds,
         [args.fold],
         transform=mil_transform,
     )
-    loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=True)
+
+    train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True)
+    val_loader = DataLoader(val_ds, batch_size=1)
 
     if args.model == "attention":
-        model = AttentionMIL(pretrained=False)
+        model = AttentionMIL(pretrained=False, dropout=args.dropout)
     else:
-        model = MaxPoolMIL(pretrained=False)
+        model = MaxPoolMIL(pretrained=False, dropout=args.dropout)
+    model.to(device)
     model.train()
 
     criterion = torch.nn.BCELoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
+    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+
+    from sklearn.metrics import roc_auc_score
+    import matplotlib.pyplot as plt
+
+    print(f"Training on {device} for {args.epochs} epochs")
+    train_losses, val_losses = [], []
+    train_aucs, val_aucs = [], []
 
     for epoch in range(args.epochs):
-        for bags, labels, _ in loader:
-            outputs, *_ = model(bags)
+        model.train()
+        epoch_losses = []
+        preds = []
+        labels_list = []
+        for bags, labels, _ in train_loader:
+            bags = bags.to(device)
+            labels = labels.to(device)
+            outputs, _ = model(bags)
             loss = criterion(outputs, labels)
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-        print(f"Epoch {epoch+1}: loss={loss.item():.4f}")
+            epoch_losses.append(loss.item())
+            preds.extend(outputs.detach().cpu().tolist())
+            labels_list.extend(labels.cpu().tolist())
+        train_loss = sum(epoch_losses) / len(epoch_losses)
+        try:
+            train_auc = roc_auc_score(labels_list, preds)
+        except Exception:
+            train_auc = 0.0
+
+        model.eval()
+        val_epoch_losses = []
+        val_preds = []
+        val_labels = []
+        with torch.no_grad():
+            for bags, labels, _ in val_loader:
+                bags = bags.to(device)
+                labels = labels.to(device)
+                outputs, _ = model(bags)
+                loss = criterion(outputs, labels)
+                val_epoch_losses.append(loss.item())
+                val_preds.extend(outputs.cpu().tolist())
+                val_labels.extend(labels.cpu().tolist())
+        val_loss = sum(val_epoch_losses) / len(val_epoch_losses)
+        try:
+            val_auc = roc_auc_score(val_labels, val_preds)
+        except Exception:
+            val_auc = 0.0
+
+        train_losses.append(train_loss)
+        val_losses.append(val_loss)
+        train_aucs.append(train_auc)
+        val_aucs.append(val_auc)
+
+        print(
+            f"Epoch {epoch+1}: train_loss={train_loss:.4f} train_auc={train_auc:.3f} "
+            f"val_loss={val_loss:.4f} val_auc={val_auc:.3f}"
+        )
+
+    if args.plot_loss:
+        plt.figure()
+        plt.plot(train_losses, label="train")
+        plt.plot(val_losses, label="val")
+        plt.xlabel("Epoch")
+        plt.ylabel("Loss")
+        plt.legend()
+        plt.tight_layout()
+        plt.savefig(args.plot_loss)
+        print(f"Saved loss plot to {args.plot_loss}")
 
     torch.save(model.state_dict(), args.output)
     print(f"Saved model to {args.output}")

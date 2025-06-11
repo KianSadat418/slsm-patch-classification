@@ -3,7 +3,7 @@ import torch.nn as nn
 import torchvision.models as models
 
 class MaxPoolMIL(nn.Module):
-    def __init__(self, pretrained=True):
+    def __init__(self, pretrained=True, dropout=0.5):
         super(MaxPoolMIL, self).__init__()
 
         backbone = models.resnet18(pretrained=pretrained)
@@ -11,6 +11,7 @@ class MaxPoolMIL(nn.Module):
 
         self.embedding_dim = 512
         self.classifier = nn.Sequential(
+            nn.Dropout(dropout),
             nn.Linear(self.embedding_dim, 1),
             nn.Sigmoid()
         )
@@ -22,7 +23,11 @@ class MaxPoolMIL(nn.Module):
         features = self.feature_extractor(x)
         features = features.view(B, N, self.embedding_dim)
 
-        pooled, _ = torch.max(features, dim=1)
+        # Patch-level scores
+        patch_scores = self.classifier(features).squeeze(-1)  # (B, N)
 
-        output = self.classifier(pooled)
-        return output.squeeze(1)
+        # Bag prediction via max pooling over patch embeddings
+        pooled, _ = torch.max(features, dim=1)
+        bag_logits = self.classifier(pooled).squeeze(1)
+
+        return bag_logits, patch_scores
