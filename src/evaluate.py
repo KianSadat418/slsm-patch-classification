@@ -5,7 +5,7 @@ import json
 import torch
 from torch.utils.data import DataLoader
 
-from dataset import MILDataset, mil_transform
+from dataset import MILDataset, mil_transform, mil_collate
 from model_attention import AttentionMIL
 from model_maxpool import MaxPoolMIL
 
@@ -36,7 +36,7 @@ def main():
         [args.fold],
         transform=mil_transform,
     )
-    loader = DataLoader(dataset, batch_size=1)
+    loader = DataLoader(dataset, batch_size=1, collate_fn=mil_collate)
 
     if args.model == "attention":
         model = AttentionMIL(pretrained=False)
@@ -55,15 +55,16 @@ def main():
 
     with torch.no_grad():
         for bags, labels, bag_ids in loader:
-            bags = bags.to(device)
-            labels = labels.to(device)
-            outputs, patch_scores = model(bags)
-            preds = (outputs > 0.5).float()
-            correct += (preds == labels).sum().item()
-            total += labels.numel()
-            patch_dict[bag_ids[0]] = patch_scores.squeeze(0).cpu().tolist()
-            all_labels.extend(labels.cpu().tolist())
-            all_probs.extend(outputs.cpu().tolist())
+            for bag, label, bag_id in zip(bags, labels, bag_ids):
+                bag = bag.unsqueeze(0).to(device)
+                label = label.unsqueeze(0).to(device)
+                outputs, patch_scores = model(bag)
+                preds = (outputs > 0.5).float()
+                correct += (preds == label).sum().item()
+                total += label.numel()
+                patch_dict[bag_id] = patch_scores.squeeze(0).cpu().tolist()
+                all_labels.extend(label.cpu().tolist())
+                all_probs.extend(outputs.cpu().tolist())
 
     acc = correct / total if total else 0
     print(f"Accuracy: {acc*100:.2f}%")
