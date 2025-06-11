@@ -1,6 +1,7 @@
-# Data and results folders
+# Data, results folders, and images
 data/
 results/
+.png
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
