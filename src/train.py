@@ -1,5 +1,6 @@
 import argparse
 from pathlib import Path
+import json
 
 import torch
 from torch.utils.data import DataLoader
@@ -14,7 +15,7 @@ def get_args():
     parser.add_argument("--bags", type=Path, required=True, help="Path to bag_to_patches.json")
     parser.add_argument("--labels", type=Path, required=True, help="Path to bag_labels.json")
     parser.add_argument("--folds", type=Path, required=True, help="Path to bag_folds.json")
-    parser.add_argument("--fold", type=int, default=0, help="Fold id to use for training")
+    parser.add_argument("--fold", type=int, default=0, help="Fold id to use for validation")
     parser.add_argument("--model", choices=["attention", "maxpool"], default="attention")
     parser.add_argument("--epochs", type=int, default=1)
     parser.add_argument("--batch-size", type=int, default=1)
@@ -30,10 +31,9 @@ def get_args():
 
 def main():
     args = get_args()
-
     device = torch.device(args.device)
 
-    import json
+    # Determine training folds (all except the specified fold)
     with open(args.folds, "r") as f:
         fold_map = json.load(f)
     all_folds = set(fold_map.values())
@@ -61,6 +61,7 @@ def main():
         model = AttentionMIL(pretrained=False, dropout=args.dropout)
     else:
         model = MaxPoolMIL(pretrained=False, dropout=args.dropout)
+
     model.to(device)
     model.train()
 

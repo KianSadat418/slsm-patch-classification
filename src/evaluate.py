@@ -1,5 +1,6 @@
 import argparse
 from pathlib import Path
+import json
 
 import torch
 from torch.utils.data import DataLoader
@@ -26,7 +27,6 @@ def get_args():
 
 def main():
     args = get_args()
-
     device = torch.device(args.device)
 
     dataset = MILDataset(
@@ -42,6 +42,7 @@ def main():
         model = AttentionMIL(pretrained=False)
     else:
         model = MaxPoolMIL(pretrained=False)
+
     model.load_state_dict(torch.load(args.weights, map_location=device))
     model.to(device)
     model.eval()
@@ -51,6 +52,7 @@ def main():
     patch_dict = {}
     all_labels = []
     all_probs = []
+
     with torch.no_grad():
         for bags, labels, bag_ids in loader:
             bags = bags.to(device)
@@ -62,8 +64,10 @@ def main():
             patch_dict[bag_ids[0]] = patch_scores.squeeze(0).cpu().tolist()
             all_labels.extend(labels.cpu().tolist())
             all_probs.extend(outputs.cpu().tolist())
+
     acc = correct / total if total else 0
     print(f"Accuracy: {acc*100:.2f}%")
+
     if args.auc:
         from sklearn.metrics import roc_auc_score
         try:
@@ -73,7 +77,6 @@ def main():
         print(f"AUC: {auc:.3f}")
 
     if args.save_scores:
-        import json
         with open(args.save_scores, "w") as f:
             json.dump(patch_dict, f)
         print(f"Saved patch scores to {args.save_scores}")
