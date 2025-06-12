@@ -22,6 +22,19 @@ def get_args():
     parser.add_argument("--lr", type=float, default=1e-5)
     parser.add_argument("--weight-decay", type=float, default=1e-5)
     parser.add_argument("--dropout", type=float, default=0.5)
+    parser.add_argument("--patch-dropout", type=float, default=0.0,
+                        help="Probability to drop patch embeddings during training")
+    parser.add_argument("--attn-l1", type=float, default=0.0,
+                        help="Coefficient for L1 regularization on attention weights")
+    parser.add_argument("--cluster-loss", action="store_true",
+                        help="Enable instance-level clustering loss")
+    parser.add_argument("--cluster-top-k", type=int, default=2,
+                        help="Number of top/bottom patches for clustering")
+    parser.add_argument("--cluster-coef", type=float, nargs=2, default=[1.0, 1.0],
+                        metavar=('C1', 'C2'),
+                        help="Coefficients for slide and instance losses")
+    parser.add_argument("--svm-cluster", action="store_true",
+                        help="Use smooth top-1 SVM loss for clustering")
     parser.add_argument("--plot-loss", type=Path, help="Optional path to save loss curve plot")
     parser.add_argument("--output", type=Path, default=Path("model.pt"))
     parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu",
@@ -63,7 +76,8 @@ def main():
     val_loader = DataLoader(val_ds, batch_size=1, collate_fn=mil_collate)
 
     if args.model == "attention":
-        model = AttentionMIL(pretrained=True, dropout=args.dropout)
+        model = AttentionMIL(pretrained=True, dropout=args.dropout,
+                             patch_dropout=args.patch_dropout)
         # freeze early layers for the first few epochs
         for idx, module in enumerate(model.feature_extractor):
             if idx > 5:
@@ -94,8 +108,29 @@ def main():
             for bag, label in zip(bags, labels):
                 bag = bag.unsqueeze(0).to(device)
                 label = label.unsqueeze(0).to(device)
-                outputs, _ = model(bag)
+                outputs, A, feats = model(
+                    bag, return_features=(args.cluster_loss or args.attn_l1 > 0)
+                )
                 loss = criterion(outputs, label)
+                if args.attn_l1 > 0:
+                    loss = loss + args.attn_l1 * A.abs().mean()
+                if args.cluster_loss:
+                    k = min(args.cluster_top_k, A.shape[1] // 2)
+                    top_idx = torch.topk(A, k, dim=1).indices.squeeze(0)
+                    bottom_idx = torch.topk(A, k, dim=1, largest=False).indices.squeeze(0)
+                    inst_feats = torch.cat([feats[0, top_idx], feats[0, bottom_idx]], dim=0)
+                    inst_labels = torch.cat([
+                        torch.ones(k, device=device),
+                        torch.zeros(k, device=device)
+                    ])
+                    logits = model.classifier[1](inst_feats)
+                    if args.svm_cluster:
+                        signed = (inst_labels * 2 - 1)
+                        c_loss = torch.nn.functional.softplus(1 - signed * logits.squeeze(1)).mean()
+                    else:
+                        c_loss = torch.nn.functional.binary_cross_entropy_with_logits(
+                            logits.squeeze(1), inst_labels)
+                    loss = args.cluster_coef[0] * loss + args.cluster_coef[1] * c_loss
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
@@ -117,8 +152,10 @@ def main():
                 for bag, label in zip(bags, labels):
                     bag = bag.unsqueeze(0).to(device)
                     label = label.unsqueeze(0).to(device)
-                    outputs, _ = model(bag)
+                    outputs, A, _ = model(bag, return_features=args.attn_l1 > 0)
                     loss = criterion(outputs, label)
+                    if args.attn_l1 > 0:
+                        loss = loss + args.attn_l1 * A.abs().mean()
                     val_epoch_losses.append(loss.item())
                     val_preds.extend(outputs.cpu().tolist())
                     val_labels.extend(label.cpu().tolist())
