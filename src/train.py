@@ -24,6 +24,7 @@ def get_args():
     parser.add_argument("--weight-decay", type=float, default=1e-4)
     parser.add_argument("--dropout", type=float, default=0.5)
     parser.add_argument("--plot-loss", type=Path, help="Optional path to save loss curve plot")
+    parser.add_argument("--plot-auc", type=Path, help="Optional path to save AUC curve plot")
     parser.add_argument("--output", type=Path, default=Path("model.pt"))
     parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu",
                         help="Device to train on")
@@ -162,6 +163,17 @@ def main():
         plt.tight_layout()
         plt.savefig(args.plot_loss)
         print(f"Saved loss plot to {args.plot_loss}")
+
+    if args.plot_auc:
+        plt.figure()
+        plt.plot(train_aucs, label="train")
+        plt.plot(val_aucs, label="val")
+        plt.xlabel("Epoch")
+        plt.ylabel("AUC")
+        plt.legend()
+        plt.tight_layout()
+        plt.savefig(args.plot_auc)
+        print(f"Saved AUC plot to {args.plot_auc}")
 
     torch.save(model.state_dict(), args.output)
     print(f"Saved model to {args.output}")
