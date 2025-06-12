@@ -1,7 +1,8 @@
-# Data, results folders, and images
+# Data, results folders, model weights, and images
 data/
 results/
 .png
+.pt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

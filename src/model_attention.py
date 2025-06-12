@@ -4,7 +4,7 @@ import torchvision.models as models
 import torch.nn.functional as F
 
 class AttentionMIL(nn.Module):
-    def __init__(self, pretrained=True, dropout=0.4):
+    def __init__(self, pretrained=True, dropout=0.5):
         super(AttentionMIL, self).__init__()
 
         backbone = models.resnet18(pretrained=pretrained)
