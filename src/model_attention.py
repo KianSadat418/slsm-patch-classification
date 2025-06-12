@@ -12,10 +12,10 @@ class AttentionMIL(nn.Module):
 
         self.embedding_dim = 512
         self.attention_layer = nn.Sequential(
-            nn.Dropout(p=0.25),
+            nn.Dropout(p=0.2),
             nn.Linear(self.embedding_dim, 128),
             nn.Tanh(),
-            nn.Dropout(p=0.25),
+            nn.Dropout(p=0.2),
             nn.Linear(128, 1)
         )
         self.classifier = nn.Sequential(

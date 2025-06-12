@@ -101,11 +101,11 @@ def main():
         for bags, labels, _ in train_loader:
             for bag, label in zip(bags, labels):
                 N = bag.size(0)
-                k = int(0.8 * N)
+                k = int(0.9 * N)
                 idx = torch.randperm(N)[:k]
                 bag_sub = bag[idx]
                 bag = bag_sub.unsqueeze(0).to(device)
-                label = label.long().to(device)
+                label = label.unsqueeze(0).long().to(device)
                 logits, _ = model(bag)
                 loss = criterion(logits, label)
                 optimizer.zero_grad()
@@ -129,7 +129,7 @@ def main():
             for bags, labels, _ in val_loader:
                 for bag, label in zip(bags, labels):
                     bag = bag.unsqueeze(0).to(device)
-                    label = label.long().to(device)
+                    label = label.unsqueeze(0).long().to(device)
                     logits, _ = model(bag)
                     loss = criterion(logits, label)
                     val_epoch_losses.append(loss.item())
