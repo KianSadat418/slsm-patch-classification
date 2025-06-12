@@ -12,13 +12,15 @@ class AttentionMIL(nn.Module):
 
         self.embedding_dim = 512
         self.attention_layer = nn.Sequential(
+            nn.Dropout(p=0.25),
             nn.Linear(self.embedding_dim, 128),
             nn.Tanh(),
+            nn.Dropout(p=0.25),
             nn.Linear(128, 1)
         )
         self.classifier = nn.Sequential(
             nn.Dropout(dropout),
-            nn.Linear(self.embedding_dim, 1),
+            nn.Linear(self.embedding_dim, 2),
         )
 
     def forward(self, x):
@@ -34,5 +36,5 @@ class AttentionMIL(nn.Module):
 
         M = torch.bmm(A, features).squeeze(1)
 
-        output = self.classifier(M)
-        return output.squeeze(1), A.squeeze(1)
+        logits = self.classifier(M)
+        return logits, A.squeeze(1)

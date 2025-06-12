@@ -4,6 +4,7 @@ import json
 
 import torch
 from torch.utils.data import DataLoader
+import torch.nn.functional as F
 
 from dataset import MILDataset, mil_transform, mil_collate
 from model_attention import AttentionMIL
@@ -20,7 +21,7 @@ def get_args():
     parser.add_argument("--epochs", type=int, default=1)
     parser.add_argument("--batch-size", type=int, default=1)
     parser.add_argument("--lr", type=float, default=1e-5)
-    parser.add_argument("--weight-decay", type=float, default=1e-5)
+    parser.add_argument("--weight-decay", type=float, default=1e-4)
     parser.add_argument("--dropout", type=float, default=0.5)
     parser.add_argument("--plot-loss", type=Path, help="Optional path to save loss curve plot")
     parser.add_argument("--output", type=Path, default=Path("model.pt"))
@@ -64,18 +65,18 @@ def main():
 
     if args.model == "attention":
         model = AttentionMIL(pretrained=True, dropout=args.dropout)
-        # freeze early layers for the first few epochs
-        for idx, module in enumerate(model.feature_extractor):
-            if idx > 5:
-                for param in module.parameters():
-                    param.requires_grad = False
+        # Freeze first convolutional layer for the first few epochs
+        modules = list(model.feature_extractor.children())
+        for m in modules[:2]:
+            for param in m.parameters():
+                param.requires_grad = False
     else:
         model = MaxPoolMIL(pretrained=True, dropout=args.dropout)
 
     model.to(device)
     model.train()
 
-    criterion = torch.nn.BCEWithLogitsLoss()
+    criterion = torch.nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
 
     from sklearn.metrics import roc_auc_score
@@ -86,21 +87,33 @@ def main():
     train_aucs, val_aucs = [], []
 
     for epoch in range(args.epochs):
+        if args.model == "attention":
+            if epoch == 2:
+                for p in modules[4].parameters():
+                    p.requires_grad = True
+            if epoch == 4:
+                for p in modules[5].parameters():
+                    p.requires_grad = True
         model.train()
         epoch_losses = []
         preds = []
         labels_list = []
         for bags, labels, _ in train_loader:
             for bag, label in zip(bags, labels):
-                bag = bag.unsqueeze(0).to(device)
-                label = label.unsqueeze(0).to(device)
-                outputs, _ = model(bag)
-                loss = criterion(outputs, label)
+                N = bag.size(0)
+                k = int(0.8 * N)
+                idx = torch.randperm(N)[:k]
+                bag_sub = bag[idx]
+                bag = bag_sub.unsqueeze(0).to(device)
+                label = label.long().to(device)
+                logits, _ = model(bag)
+                loss = criterion(logits, label)
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
                 epoch_losses.append(loss.item())
-                preds.extend(outputs.detach().cpu().tolist())
+                probs = F.softmax(logits, dim=1)[:, 1]
+                preds.extend(probs.detach().cpu().tolist())
                 labels_list.extend(label.cpu().tolist())
         train_loss = sum(epoch_losses) / len(epoch_losses)
         try:
@@ -116,11 +129,12 @@ def main():
             for bags, labels, _ in val_loader:
                 for bag, label in zip(bags, labels):
                     bag = bag.unsqueeze(0).to(device)
-                    label = label.unsqueeze(0).to(device)
-                    outputs, _ = model(bag)
-                    loss = criterion(outputs, label)
+                    label = label.long().to(device)
+                    logits, _ = model(bag)
+                    loss = criterion(logits, label)
                     val_epoch_losses.append(loss.item())
-                    val_preds.extend(outputs.cpu().tolist())
+                    val_probs = F.softmax(logits, dim=1)[:, 1]
+                    val_preds.extend(val_probs.cpu().tolist())
                     val_labels.extend(label.cpu().tolist())
         val_loss = sum(val_epoch_losses) / len(val_epoch_losses)
         try:
