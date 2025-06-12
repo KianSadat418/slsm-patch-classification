@@ -19,14 +19,15 @@ This project explores Multiple Instance Learning (MIL) approaches for classifyin
 
 Train a model using the generated JSON files. The training script automatically
 uses all folds except the one specified by `--fold` for validation.
-Loss curves can optionally be saved with `--plot-loss`.
+Loss curves can optionally be saved with `--plot-loss` and AUC curves with
+`--plot-auc`.
 
 ```bash
 python src/train.py --bags path/to/bag_to_patches.json \
                     --labels path/to/bag_labels.json \
                     --folds path/to/bag_folds.json \
                     --fold 0 --model attention --epochs 10 \
-                    --plot-loss loss.png --device cuda
+                    --plot-loss loss.png --plot-auc auc.png --device cuda
 ```
 
 The trained weights are saved to `model.pt` by default.
