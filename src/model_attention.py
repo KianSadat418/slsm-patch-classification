@@ -4,7 +4,7 @@ import torchvision.models as models
 import torch.nn.functional as F
 
 class AttentionMIL(nn.Module):
-    def __init__(self, pretrained=True, dropout=0.5):
+    def __init__(self, pretrained=True, dropout=0.4):
         super(AttentionMIL, self).__init__()
 
         backbone = models.resnet18(pretrained=pretrained)
@@ -19,7 +19,6 @@ class AttentionMIL(nn.Module):
         self.classifier = nn.Sequential(
             nn.Dropout(dropout),
             nn.Linear(self.embedding_dim, 1),
-            nn.Sigmoid()
         )
 
     def forward(self, x):

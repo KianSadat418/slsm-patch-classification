@@ -59,6 +59,7 @@ def main():
                 bag = bag.unsqueeze(0).to(device)
                 label = label.unsqueeze(0).to(device)
                 outputs, patch_scores = model(bag)
+                probs = torch.sigmoid(outputs)
                 preds = (outputs > 0.5).float()
                 correct += (preds == label).sum().item()
                 total += label.numel()

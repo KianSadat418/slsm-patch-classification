@@ -19,8 +19,8 @@ def get_args():
     parser.add_argument("--model", choices=["attention", "maxpool"], default="attention")
     parser.add_argument("--epochs", type=int, default=1)
     parser.add_argument("--batch-size", type=int, default=1)
-    parser.add_argument("--lr", type=float, default=1e-4)
-    parser.add_argument("--weight-decay", type=float, default=1e-5)
+    parser.add_argument("--lr", type=float, default=1e-5)
+    parser.add_argument("--weight-decay", type=float, default=1e-4)
     parser.add_argument("--dropout", type=float, default=0.5)
     parser.add_argument("--plot-loss", type=Path, help="Optional path to save loss curve plot")
     parser.add_argument("--output", type=Path, default=Path("model.pt"))
@@ -63,14 +63,19 @@ def main():
     val_loader = DataLoader(val_ds, batch_size=1, collate_fn=mil_collate)
 
     if args.model == "attention":
-        model = AttentionMIL(pretrained=False, dropout=args.dropout)
+        model = AttentionMIL(pretrained=True, dropout=args.dropout)
+        # freeze early layers for the first few epochs
+        for idx, module in enumerate(model.feature_extractor):
+            if idx > 5:
+                for param in module.parameters():
+                    param.requires_grad = False
     else:
-        model = MaxPoolMIL(pretrained=False, dropout=args.dropout)
+        model = MaxPoolMIL(pretrained=True, dropout=args.dropout)
 
     model.to(device)
     model.train()
 
-    criterion = torch.nn.BCELoss()
+    criterion = torch.nn.BCEWithLogitsLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
 
     from sklearn.metrics import roc_auc_score
