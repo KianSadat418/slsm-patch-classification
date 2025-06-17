@@ -20,7 +20,7 @@ def main():
     args = get_args()
     df = pd.read_csv(args.labels_csv)
 
-    bag_to_patches = defaultdict(list)
+    bag_to_patches = {}
     bag_labels = {}
     bag_folds = {}
 
@@ -30,15 +30,14 @@ def main():
         label = row["label"]
         fold = row["fold"]
 
-        patch_folder = args.patch_dir / str(study) / str(biopsy_img_id)
-        patches = sorted(patch_folder.glob("*.png"))
+        feature_path = args.patch_dir / "features" / f"{biopsy_img_id}.pt"
 
-        if patches:
-            bag_to_patches[biopsy_img_id] = [str(p) for p in patches]
+        if feature_path.exists():
+            bag_to_patches[biopsy_img_id] = str(feature_path)
             bag_labels[biopsy_img_id] = int(label)
             bag_folds[biopsy_img_id] = int(fold)
         else:
-            print(f"Warning: no patches found in {patch_folder}")
+            print(f"Warning: Feature file {feature_path} does not exist.")
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     (args.out_dir / "bag_to_patches.json").write_text(json.dumps(bag_to_patches))

@@ -1,7 +1,5 @@
 import torch
 from torch.utils.data import Dataset
-from torchvision import transforms
-from PIL import Image
 import json
 
 class MILDataset(Dataset):
@@ -23,30 +21,11 @@ class MILDataset(Dataset):
 
     def __getitem__(self, idx):
         bag_id = self.bag_ids[idx]
-        patch_paths = self.bag_to_patches[bag_id]
+        feat_path = self.bag_to_patches[bag_id]
         label = self.bag_labels[bag_id]
 
-        patch_tensors = []
-        for patch_path in patch_paths:
-            img = Image.open(patch_path).convert("RGB")
-            if self.transform:
-                img = self.transform(img)
-            patch_tensors.append(img)
-
-        bag_tensor = torch.stack(patch_tensors)
-
-        return bag_tensor, torch.tensor(label, dtype=torch.float32), bag_id
-
-mil_transform = transforms.Compose([
-    transforms.Resize((224, 224)),
-    transforms.ToTensor(),
-    transforms.Normalize(mean=[0.5]*3, std=[0.5]*3),
-    transforms.RandomHorizontalFlip(),
-    transforms.RandomRotation(90),
-    transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
-    transforms.RandomPerspective(distortion_scale=0.1, p=0.5),
-])
-
+        bag_tensor = torch.load(feat_path)
+        return bag_tensor, torch.tensor(label, dtype=torch.long), bag_id
 
 def mil_collate(batch):
     """Custom collate_fn to handle bags with different numbers of patches."""

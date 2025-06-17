@@ -6,7 +6,7 @@ import torch
 from torch.utils.data import DataLoader
 import torch.nn.functional as F
 
-from dataset import MILDataset, mil_transform, mil_collate
+from dataset import MILDataset, mil_collate
 from model_attention import AttentionMIL
 from model_maxpool import MaxPoolMIL
 
@@ -45,14 +45,12 @@ def main():
         args.labels,
         args.folds,
         train_folds,
-        transform=mil_transform,
     )
     val_ds = MILDataset(
         args.bags,
         args.labels,
         args.folds,
         [args.fold],
-        transform=mil_transform,
     )
 
     train_loader = DataLoader(
@@ -64,14 +62,9 @@ def main():
     val_loader = DataLoader(val_ds, batch_size=1, collate_fn=mil_collate)
 
     if args.model == "attention":
-        model = AttentionMIL(pretrained=True, dropout=args.dropout)
-        # Freeze first convolutional layer for the first few epochs
-        modules = list(model.feature_extractor.children())
-        for m in modules[:2]:
-            for param in m.parameters():
-                param.requires_grad = False
+        model = AttentionMIL(dropout=args.dropout)
     else:
-        model = MaxPoolMIL(pretrained=True, dropout=args.dropout)
+        model = MaxPoolMIL(dropout=args.dropout)
 
     model.to(device)
     model.train()
@@ -87,13 +80,6 @@ def main():
     train_aucs, val_aucs = [], []
 
     for epoch in range(args.epochs):
-        if args.model == "attention":
-            if epoch == 2:
-                for p in modules[4].parameters():
-                    p.requires_grad = True
-            if epoch == 4:
-                for p in modules[5].parameters():
-                    p.requires_grad = True
         model.train()
         epoch_losses = []
         preds = []
@@ -105,7 +91,7 @@ def main():
                 idx = torch.randperm(N)[:k]
                 bag_sub = bag[idx]
                 bag = bag_sub.unsqueeze(0).to(device)
-                label = label.long().to(device)
+                label = label.unsqueeze(0).long().to(device)
                 logits, _ = model(bag)
                 loss = criterion(logits, label)
                 optimizer.zero_grad()
@@ -129,7 +115,7 @@ def main():
             for bags, labels, _ in val_loader:
                 for bag, label in zip(bags, labels):
                     bag = bag.unsqueeze(0).to(device)
-                    label = label.long().to(device)
+                    label = label.unsqueeze(0).long().to(device)
                     logits, _ = model(bag)
                     loss = criterion(logits, label)
                     val_epoch_losses.append(loss.item())

@@ -4,8 +4,9 @@ import json
 
 import torch
 from torch.utils.data import DataLoader
+import torch.nn.functional as F
 
-from dataset import MILDataset, mil_transform, mil_collate
+from dataset import MILDataset, mil_collate
 from model_attention import AttentionMIL
 from model_maxpool import MaxPoolMIL
 
@@ -18,7 +19,7 @@ def get_args():
     parser.add_argument("--fold", type=int, default=1, help="Fold id to evaluate")
     parser.add_argument("--model", choices=["attention", "maxpool"], default="attention")
     parser.add_argument("--weights", type=Path, required=True, help="Path to trained weights")
-    parser.add_argument("--save-scores", type=Path, help="Optional path to save patch-level scores as JSON")
+    parser.add_argument("--save-scores", type=Path, help="Optional path to save attention scores as JSON")
     parser.add_argument("--auc", action="store_true", help="Compute ROC AUC in addition to accuracy")
     parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu",
                         help="Device for evaluation")
@@ -34,14 +35,14 @@ def main():
         args.labels,
         args.folds,
         [args.fold],
-        transform=mil_transform,
+        transform=None,  # not needed with precomputed features
     )
     loader = DataLoader(dataset, batch_size=1, collate_fn=mil_collate)
 
     if args.model == "attention":
-        model = AttentionMIL(pretrained=False)
+        model = AttentionMIL(dropout=0.5)  # pretrained=False by default now
     else:
-        model = MaxPoolMIL(pretrained=False)
+        model = MaxPoolMIL(dropout=0.5)
 
     model.load_state_dict(torch.load(args.weights, map_location=device))
     model.to(device)
@@ -58,17 +59,19 @@ def main():
             for bag, label, bag_id in zip(bags, labels, bag_ids):
                 bag = bag.unsqueeze(0).to(device)
                 label = label.unsqueeze(0).to(device)
-                outputs, patch_scores = model(bag)
-                probs = torch.sigmoid(outputs)
-                preds = (outputs > 0.5).float()
-                correct += (preds == label).sum().item()
-                total += label.numel()
-                patch_dict[bag_id] = patch_scores.squeeze(0).cpu().tolist()
+                logits, attention_scores = model(bag)
+
+                probs = F.softmax(logits, dim=1)
+                pred_class = torch.argmax(probs, dim=1)
+                correct += (pred_class == label).sum().item()
+                total += label.size(0)
+
+                patch_dict[bag_id] = attention_scores.squeeze(0).cpu().tolist()
                 all_labels.extend(label.cpu().tolist())
-                all_probs.extend(outputs.cpu().tolist())
+                all_probs.extend(probs[:, 1].cpu().tolist())  # class 1 probability
 
     acc = correct / total if total else 0
-    print(f"Accuracy: {acc*100:.2f}%")
+    print(f"Accuracy: {acc * 100:.2f}%")
 
     if args.auc:
         from sklearn.metrics import roc_auc_score
