@@ -2,7 +2,8 @@
 data/
 results/
 .png
-.pt
+.DS_Store
+*.pt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
