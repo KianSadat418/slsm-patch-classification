@@ -12,7 +12,10 @@ class MaxPoolMIL(nn.Module):
         self.embedding_dim = 512
         self.classifier = nn.Sequential(
             nn.Dropout(dropout),
-            nn.Linear(self.embedding_dim, 1),
+            nn.Linear(self.embedding_dim, 256),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(256, 1),
             nn.Sigmoid()
         )
 
