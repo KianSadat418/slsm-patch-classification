@@ -14,7 +14,6 @@ def get_args():
     parser.add_argument("--out-dir", type=Path, default=Path("analysis"), help="Directory to save figures and summary")
     return parser.parse_args()
 
-
 def calc_stats(img_path: Path):
     """Return mean intensity and Shannon entropy for an image."""
     img = Image.open(img_path).convert("L")
@@ -24,7 +23,6 @@ def calc_stats(img_path: Path):
     hist = hist[hist > 0]
     entropy = float(-(hist * np.log2(hist)).sum())
     return mean_val, entropy
-
 
 def main():
     args = get_args()
@@ -70,6 +68,7 @@ def main():
                 "mean_entropy": 0.0,
                 "low_detail_frac": 1.0,
             })
+      
     df["patch_count"] = patch_counts
 
     df["patch_count"].plot(kind="hist", bins=20)
