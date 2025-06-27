@@ -5,6 +5,7 @@ import json
 import torch
 from torch.utils.data import DataLoader
 import torch.nn.functional as F
+import matplotlib.pyplot as plt
 
 from dataset import MILDataset, mil_collate
 from model_attention import AttentionMIL
@@ -20,7 +21,7 @@ def get_args():
     parser.add_argument("--model", choices=["attention", "maxpool"], default="attention")
     parser.add_argument("--weights", type=Path, required=True, help="Path to trained weights")
     parser.add_argument("--save-scores", type=Path, help="Optional path to save attention scores as JSON")
-    parser.add_argument("--auc", action="store_true", help="Compute ROC AUC in addition to accuracy")
+    parser.add_argument("--plot-roc", type=Path, help="Optional path to save ROC curve plot")
     parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu",
                         help="Device for evaluation")
     return parser.parse_args()
@@ -73,13 +74,18 @@ def main():
     acc = correct / total if total else 0
     print(f"Accuracy: {acc * 100:.2f}%")
 
-    if args.auc:
-        from sklearn.metrics import roc_auc_score
-        try:
-            auc = roc_auc_score(all_labels, all_probs)
-        except Exception:
-            auc = 0.0
-        print(f"AUC: {auc:.3f}")
+    from sklearn.metrics import roc_auc_score, RocCurveDisplay
+    try:
+        auc = roc_auc_score(all_labels, all_probs)
+    except Exception:
+        auc = 0.0
+    print(f"AUC: {auc:.3f}")
+
+    if args.plot_roc:
+        RocCurveDisplay.from_predictions(all_labels, all_probs)
+        plt.tight_layout()
+        plt.savefig(args.plot_roc)
+        print(f"Saved ROC curve to {args.plot_roc}")
 
     if args.save_scores:
         with open(args.save_scores, "w") as f:

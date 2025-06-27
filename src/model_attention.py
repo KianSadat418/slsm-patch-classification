@@ -4,7 +4,7 @@ import torchvision.models as models
 import torch.nn.functional as F
 
 class Attn_Net_Gated(nn.Module):
-    def __init__(self, L=512, D=128, dropout=True):
+    def __init__(self, L=512, D=256, dropout=True):
         super(Attn_Net_Gated, self).__init__()
         self.attention_a = nn.Sequential(
             nn.Linear(L, D),
@@ -29,10 +29,13 @@ class AttentionMIL(nn.Module):
         super(AttentionMIL, self).__init__()
 
         self.embedding_dim = 2048
-        self.attention_module = Attn_Net_Gated(L=self.embedding_dim, D=128, dropout=True)
+        self.attention_module = Attn_Net_Gated(L=self.embedding_dim, D=256, dropout=True)
         self.classifier = nn.Sequential(
             nn.Dropout(dropout),
-            nn.Linear(self.embedding_dim, 2),
+            nn.Linear(self.embedding_dim, 512),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(512, 2),
         )
 
         self.k_sample = 8
