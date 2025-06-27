@@ -25,6 +25,7 @@ def get_args():
     parser.add_argument("--dropout", type=float, default=0.5)
     parser.add_argument("--plot-loss", type=Path, help="Optional path to save loss curve plot")
     parser.add_argument("--plot-auc", type=Path, help="Optional path to save AUC curve plot")
+    parser.add_argument("--plot-acc", type=Path, help="Optional path to save accuracy curve plot")
     parser.add_argument("--output", type=Path, default=Path("model.pt"))
     parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu",
                         help="Device to train on")
@@ -79,12 +80,15 @@ def main():
     print(f"Training on {device} for {args.epochs} epochs")
     train_losses, val_losses = [], []
     train_aucs, val_aucs = [], []
+    train_accs, val_accs = [], []
 
     for epoch in range(args.epochs):
         model.train()
         epoch_losses = []
         preds = []
         labels_list = []
+        train_correct = 0
+        train_total = 0
         for bags, labels, _ in train_loader:
             for bag, label in zip(bags, labels):
                 N = bag.size(0)
@@ -102,16 +106,22 @@ def main():
                 probs = F.softmax(logits, dim=1)[:, 1]
                 preds.extend(probs.detach().cpu().tolist())
                 labels_list.extend(label.cpu().tolist())
+                pred_class = torch.argmax(logits, dim=1)
+                train_correct += (pred_class == label).sum().item()
+                train_total += label.size(0)
         train_loss = sum(epoch_losses) / len(epoch_losses)
         try:
             train_auc = roc_auc_score(labels_list, preds)
         except Exception:
             train_auc = 0.0
+        train_acc = train_correct / train_total if train_total else 0.0
 
         model.eval()
         val_epoch_losses = []
         val_preds = []
         val_labels = []
+        val_correct = 0
+        val_total = 0
         with torch.no_grad():
             for bags, labels, _ in val_loader:
                 for bag, label in zip(bags, labels):
@@ -123,20 +133,26 @@ def main():
                     val_probs = F.softmax(logits, dim=1)[:, 1]
                     val_preds.extend(val_probs.cpu().tolist())
                     val_labels.extend(label.cpu().tolist())
+                    val_pred_class = torch.argmax(logits, dim=1)
+                    val_correct += (val_pred_class == label).sum().item()
+                    val_total += label.size(0)
         val_loss = sum(val_epoch_losses) / len(val_epoch_losses)
         try:
             val_auc = roc_auc_score(val_labels, val_preds)
         except Exception:
             val_auc = 0.0
+        val_acc = val_correct / val_total if val_total else 0.0
 
         train_losses.append(train_loss)
         val_losses.append(val_loss)
         train_aucs.append(train_auc)
         val_aucs.append(val_auc)
+        train_accs.append(train_acc)
+        val_accs.append(val_acc)
 
         print(
-            f"Epoch {epoch+1}: train_loss={train_loss:.4f} train_auc={train_auc:.3f} "
-            f"val_loss={val_loss:.4f} val_auc={val_auc:.3f}"
+            f"Epoch {epoch+1}: train_loss={train_loss:.4f} train_auc={train_auc:.3f} train_acc={train_acc:.3f} "
+            f"val_loss={val_loss:.4f} val_auc={val_auc:.3f} val_acc={val_acc:.3f}"
         )
 
     if args.plot_loss:
@@ -160,6 +176,17 @@ def main():
         plt.tight_layout()
         plt.savefig(args.plot_auc)
         print(f"Saved AUC plot to {args.plot_auc}")
+
+    if args.plot_acc:
+        plt.figure()
+        plt.plot(train_accs, label="train")
+        plt.plot(val_accs, label="val")
+        plt.xlabel("Epoch")
+        plt.ylabel("Accuracy")
+        plt.legend()
+        plt.tight_layout()
+        plt.savefig(args.plot_acc)
+        print(f"Saved accuracy plot to {args.plot_acc}")
 
     torch.save(model.state_dict(), args.output)
     print(f"Saved model to {args.output}")
