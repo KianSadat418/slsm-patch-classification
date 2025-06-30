@@ -6,17 +6,18 @@ import torch
 from torch.utils.data import DataLoader
 import torch.nn.functional as F
 
-from dataset import MILDataset, mil_collate
+from dataset import CrossFoldDataset, mil_collate
 from model_attention import AttentionMIL
 from model_maxpool import MaxPoolMIL
 
 
 def get_args():
     parser = argparse.ArgumentParser(description="Train MIL model")
-    parser.add_argument("--bags", type=Path, required=True, help="Path to bag_to_patches.json")
-    parser.add_argument("--labels", type=Path, required=True, help="Path to bag_labels.json")
-    parser.add_argument("--folds", type=Path, required=True, help="Path to bag_folds.json")
-    parser.add_argument("--fold", type=int, default=0, help="Fold id to use for validation")
+    parser.add_argument("--annotations", type=Path, required=True, help="Path to annotations_new.csv")
+    parser.add_argument("--fold-assignments", type=Path, required=True, help="Path to fold_assignments_new.json")
+    parser.add_argument("--patch-dir", type=Path, required=True, help="Directory with extracted feature tensors")
+    parser.add_argument("--fold", type=int, default=1, help="Fold id to use (1-5)")
+    parser.add_argument("--crossval", action="store_true", help="Run 5-fold cross validation")
     parser.add_argument("--model", choices=["attention", "maxpool"], default="attention")
     parser.add_argument("--epochs", type=int, default=1)
     parser.add_argument("--batch-size", type=int, default=1)
@@ -36,160 +37,163 @@ def main():
     args = get_args()
     device = torch.device(args.device)
 
-    # Determine training folds (all except the specified fold)
-    with open(args.folds, "r") as f:
-        fold_map = json.load(f)
-    all_folds = set(fold_map.values())
-    train_folds = [f for f in all_folds if f != args.fold]
+    with open(args.fold_assignments, "r") as f:
+        fold_assignments = json.load(f)
 
-    train_ds = MILDataset(
-        args.bags,
-        args.labels,
-        args.folds,
-        train_folds,
-    )
-    val_ds = MILDataset(
-        args.bags,
-        args.labels,
-        args.folds,
-        [args.fold],
-    )
+    def run_training(fold_key: str):
+        train_ids = fold_assignments[fold_key]["train"]
+        val_ids = fold_assignments[fold_key]["val"]
 
-    train_loader = DataLoader(
-        train_ds,
-        batch_size=args.batch_size,
-        shuffle=True,
-        collate_fn=mil_collate,
-    )
-    val_loader = DataLoader(val_ds, batch_size=1, collate_fn=mil_collate)
+        train_ds = CrossFoldDataset(args.annotations, args.patch_dir, train_ids)
+        val_ds = CrossFoldDataset(args.annotations, args.patch_dir, val_ids)
 
-    if args.model == "attention":
-        model = AttentionMIL(dropout=args.dropout)
-    else:
-        model = MaxPoolMIL(dropout=args.dropout)
+        train_loader = DataLoader(
+            train_ds,
+            batch_size=args.batch_size,
+            shuffle=True,
+            collate_fn=mil_collate,
+        )
+        val_loader = DataLoader(val_ds, batch_size=1, collate_fn=mil_collate)
 
-    model.to(device)
-    model.train()
+        if args.model == "attention":
+            model = AttentionMIL(dropout=args.dropout)
+        else:
+            model = MaxPoolMIL(dropout=args.dropout)
 
-    criterion = torch.nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
-
-    from sklearn.metrics import roc_auc_score
-    import matplotlib.pyplot as plt
-
-    print(f"Training on {device} for {args.epochs} epochs")
-    train_losses, val_losses = [], []
-    train_aucs, val_aucs = [], []
-    train_accs, val_accs = [], []
-
-    for epoch in range(args.epochs):
+        model.to(device)
         model.train()
-        epoch_losses = []
-        preds = []
-        labels_list = []
-        train_correct = 0
-        train_total = 0
-        for bags, labels, _ in train_loader:
-            for bag, label in zip(bags, labels):
-                N = bag.size(0)
-                k = int(0.9 * N)
-                idx = torch.randperm(N)[:k]
-                bag_sub = bag[idx]
-                bag = bag_sub.unsqueeze(0).to(device)
-                label = label.unsqueeze(0).long().to(device)
-                logits, _ = model(bag)
-                loss = criterion(logits, label)
-                optimizer.zero_grad()
-                loss.backward()
-                optimizer.step()
-                epoch_losses.append(loss.item())
-                probs = F.softmax(logits, dim=1)[:, 1]
-                preds.extend(probs.detach().cpu().tolist())
-                labels_list.extend(label.cpu().tolist())
-                pred_class = torch.argmax(logits, dim=1)
-                train_correct += (pred_class == label).sum().item()
-                train_total += label.size(0)
-        train_loss = sum(epoch_losses) / len(epoch_losses)
-        try:
-            train_auc = roc_auc_score(labels_list, preds)
-        except Exception:
-            train_auc = 0.0
-        train_acc = train_correct / train_total if train_total else 0.0
 
-        model.eval()
-        val_epoch_losses = []
-        val_preds = []
-        val_labels = []
-        val_correct = 0
-        val_total = 0
-        with torch.no_grad():
-            for bags, labels, _ in val_loader:
+        criterion = torch.nn.CrossEntropyLoss()
+        optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+
+        from sklearn.metrics import roc_auc_score
+        import matplotlib.pyplot as plt
+
+        print(f"Training {fold_key} on {device} for {args.epochs} epochs")
+
+        train_losses, val_losses = [], []
+        train_aucs, val_aucs = [], []
+        train_accs, val_accs = [], []
+
+        for epoch in range(args.epochs):
+            model.train()
+            epoch_losses = []
+            preds = []
+            labels_list = []
+            train_correct = 0
+            train_total = 0
+            for bags, labels, _ in train_loader:
                 for bag, label in zip(bags, labels):
-                    bag = bag.unsqueeze(0).to(device)
+                    N = bag.size(0)
+                    k = int(0.9 * N)
+                    idx = torch.randperm(N)[:k]
+                    bag_sub = bag[idx]
+                    bag = bag_sub.unsqueeze(0).to(device)
                     label = label.unsqueeze(0).long().to(device)
                     logits, _ = model(bag)
                     loss = criterion(logits, label)
-                    val_epoch_losses.append(loss.item())
-                    val_probs = F.softmax(logits, dim=1)[:, 1]
-                    val_preds.extend(val_probs.cpu().tolist())
-                    val_labels.extend(label.cpu().tolist())
-                    val_pred_class = torch.argmax(logits, dim=1)
-                    val_correct += (val_pred_class == label).sum().item()
-                    val_total += label.size(0)
-        val_loss = sum(val_epoch_losses) / len(val_epoch_losses)
-        try:
-            val_auc = roc_auc_score(val_labels, val_preds)
-        except Exception:
-            val_auc = 0.0
-        val_acc = val_correct / val_total if val_total else 0.0
+                    optimizer.zero_grad()
+                    loss.backward()
+                    optimizer.step()
+                    epoch_losses.append(loss.item())
+                    probs = F.softmax(logits, dim=1)[:, 1]
+                    preds.extend(probs.detach().cpu().tolist())
+                    labels_list.extend(label.cpu().tolist())
+                    pred_class = torch.argmax(logits, dim=1)
+                    train_correct += (pred_class == label).sum().item()
+                    train_total += label.size(0)
+            train_loss = sum(epoch_losses) / len(epoch_losses)
+            try:
+                train_auc = roc_auc_score(labels_list, preds)
+            except Exception:
+                train_auc = 0.0
+            train_acc = train_correct / train_total if train_total else 0.0
 
-        train_losses.append(train_loss)
-        val_losses.append(val_loss)
-        train_aucs.append(train_auc)
-        val_aucs.append(val_auc)
-        train_accs.append(train_acc)
-        val_accs.append(val_acc)
+            model.eval()
+            val_epoch_losses = []
+            val_preds = []
+            val_labels = []
+            val_correct = 0
+            val_total = 0
+            with torch.no_grad():
+                for bags, labels, _ in val_loader:
+                    for bag, label in zip(bags, labels):
+                        bag = bag.unsqueeze(0).to(device)
+                        label = label.unsqueeze(0).long().to(device)
+                        logits, _ = model(bag)
+                        loss = criterion(logits, label)
+                        val_epoch_losses.append(loss.item())
+                        val_probs = F.softmax(logits, dim=1)[:, 1]
+                        val_preds.extend(val_probs.cpu().tolist())
+                        val_labels.extend(label.cpu().tolist())
+                        val_pred_class = torch.argmax(logits, dim=1)
+                        val_correct += (val_pred_class == label).sum().item()
+                        val_total += label.size(0)
+            val_loss = sum(val_epoch_losses) / len(val_epoch_losses)
+            try:
+                val_auc = roc_auc_score(val_labels, val_preds)
+            except Exception:
+                val_auc = 0.0
+            val_acc = val_correct / val_total if val_total else 0.0
 
-        print(
-            f"Epoch {epoch+1}: train_loss={train_loss:.4f} train_auc={train_auc:.3f} train_acc={train_acc:.3f} "
-            f"val_loss={val_loss:.4f} val_auc={val_auc:.3f} val_acc={val_acc:.3f}"
-        )
+            train_losses.append(train_loss)
+            val_losses.append(val_loss)
+            train_aucs.append(train_auc)
+            val_aucs.append(val_auc)
+            train_accs.append(train_acc)
+            val_accs.append(val_acc)
 
-    if args.plot_loss:
-        plt.figure()
-        plt.plot(train_losses, label="train")
-        plt.plot(val_losses, label="val")
-        plt.xlabel("Epoch")
-        plt.ylabel("Loss")
-        plt.legend()
-        plt.tight_layout()
-        plt.savefig(args.plot_loss)
-        print(f"Saved loss plot to {args.plot_loss}")
+            print(
+                f"Epoch {epoch+1}: train_loss={train_loss:.4f} train_auc={train_auc:.3f} train_acc={train_acc:.3f} "
+                f"val_loss={val_loss:.4f} val_auc={val_auc:.3f} val_acc={val_acc:.3f}"
+            )
 
-    if args.plot_auc:
-        plt.figure()
-        plt.plot(train_aucs, label="train")
-        plt.plot(val_aucs, label="val")
-        plt.xlabel("Epoch")
-        plt.ylabel("AUC")
-        plt.legend()
-        plt.tight_layout()
-        plt.savefig(args.plot_auc)
-        print(f"Saved AUC plot to {args.plot_auc}")
+        if args.plot_loss:
+            plt.figure()
+            plt.plot(train_losses, label="train")
+            plt.plot(val_losses, label="val")
+            plt.xlabel("Epoch")
+            plt.ylabel("Loss")
+            plt.legend()
+            plt.tight_layout()
+            loss_path = args.plot_loss.with_name(args.plot_loss.stem + f"_{fold_key}" + args.plot_loss.suffix)
+            plt.savefig(loss_path)
+            print(f"Saved loss plot to {loss_path}")
 
-    if args.plot_acc:
-        plt.figure()
-        plt.plot(train_accs, label="train")
-        plt.plot(val_accs, label="val")
-        plt.xlabel("Epoch")
-        plt.ylabel("Accuracy")
-        plt.legend()
-        plt.tight_layout()
-        plt.savefig(args.plot_acc)
-        print(f"Saved accuracy plot to {args.plot_acc}")
+        if args.plot_auc:
+            plt.figure()
+            plt.plot(train_aucs, label="train")
+            plt.plot(val_aucs, label="val")
+            plt.xlabel("Epoch")
+            plt.ylabel("AUC")
+            plt.legend()
+            plt.tight_layout()
+            auc_path = args.plot_auc.with_name(args.plot_auc.stem + f"_{fold_key}" + args.plot_auc.suffix)
+            plt.savefig(auc_path)
+            print(f"Saved AUC plot to {auc_path}")
 
-    torch.save(model.state_dict(), args.output)
-    print(f"Saved model to {args.output}")
+        if args.plot_acc:
+            plt.figure()
+            plt.plot(train_accs, label="train")
+            plt.plot(val_accs, label="val")
+            plt.xlabel("Epoch")
+            plt.ylabel("Accuracy")
+            plt.legend()
+            plt.tight_layout()
+            acc_path = args.plot_acc.with_name(args.plot_acc.stem + f"_{fold_key}" + args.plot_acc.suffix)
+            plt.savefig(acc_path)
+            print(f"Saved accuracy plot to {acc_path}")
+
+        model_path = args.output.with_name(args.output.stem + f"_{fold_key}" + args.output.suffix)
+        torch.save(model.state_dict(), model_path)
+        print(f"Saved model to {model_path}")
+        return train_accs[-1], val_accs[-1]
+
+    if args.crossval:
+        for key in sorted(fold_assignments.keys()):
+            run_training(key)
+    else:
+        run_training(f"fold{args.fold}")
 
 
 if __name__ == "__main__":

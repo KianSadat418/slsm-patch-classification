@@ -8,15 +8,14 @@ This project explores Multiple Instance Learning (MIL) approaches for classifyin
    ```bash
    pip install -r requirements.txt
    ```
-2. Generate dataset JSON files by running the preprocessing script:
-   ```bash
-   python src/preprocessing.py (associated arguments)
-   ```
+2. Extract patch-level features using `src/feature_extractor.py` and store them under `<patch_dir>/features/*.pt`.
+3. The training and evaluation scripts consume `annotations_new.csv` and `fold_assignments_new.json` directly, so no preprocessing step is required.
 
 ## Training
 
-Train a model using the generated JSON files. The training script automatically
-uses all folds except the one specified by `--fold` for validation.
+Train a model using the provided annotation and fold assignment files. The
+training script trains on the fold specified by `--fold`. Use `--crossval` to
+run all five folds sequentially.
 Loss curves can optionally be saved with `--plot-loss` and AUC curves with
 `--plot-auc`.
 
@@ -28,8 +27,8 @@ The trained weights are saved to `model.pt` by default.
 
 ## Evaluation
 
-Evaluate a trained model on another fold. Use `--auc` to report ROC AUC in addition
-to accuracy and `--save-scores` to store patch-level predictions:
+Evaluate a trained model on the validation or test split of a fold. Use
+`--save-scores` to store patch-level attention scores:
 
 ```bash
 python src/evaluate.py (associated arguments)

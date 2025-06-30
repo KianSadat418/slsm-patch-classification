@@ -7,17 +7,18 @@ from torch.utils.data import DataLoader
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
 
-from dataset import MILDataset, mil_collate
+from dataset import CrossFoldDataset, mil_collate
 from model_attention import AttentionMIL
 from model_maxpool import MaxPoolMIL
 
 
 def get_args():
     parser = argparse.ArgumentParser(description="Evaluate MIL model")
-    parser.add_argument("--bags", type=Path, required=True)
-    parser.add_argument("--labels", type=Path, required=True)
-    parser.add_argument("--folds", type=Path, required=True)
-    parser.add_argument("--fold", type=int, default=1, help="Fold id to evaluate")
+    parser.add_argument("--annotations", type=Path, required=True, help="Path to annotations_new.csv")
+    parser.add_argument("--fold-assignments", type=Path, required=True, help="Path to fold_assignments_new.json")
+    parser.add_argument("--patch-dir", type=Path, required=True, help="Directory with extracted features")
+    parser.add_argument("--fold", type=int, default=1, help="Fold id to evaluate (1-5)")
+    parser.add_argument("--split", choices=["val", "test"], default="test", help="Split to evaluate")
     parser.add_argument("--model", choices=["attention", "maxpool"], default="attention")
     parser.add_argument("--weights", type=Path, required=True, help="Path to trained weights")
     parser.add_argument("--save-scores", type=Path, help="Optional path to save attention scores as JSON")
@@ -31,12 +32,16 @@ def main():
     args = get_args()
     device = torch.device(args.device)
 
-    dataset = MILDataset(
-        args.bags,
-        args.labels,
-        args.folds,
-        [args.fold],
-        transform=None,  # not needed with precomputed features
+    with open(args.fold_assignments, "r") as f:
+        folds = json.load(f)
+    fold_key = f"fold{args.fold}"
+    bag_ids = folds[fold_key][args.split]
+
+    dataset = CrossFoldDataset(
+        args.annotations,
+        args.patch_dir,
+        bag_ids,
+        transform=None,
     )
     loader = DataLoader(dataset, batch_size=1, collate_fn=mil_collate)
 
