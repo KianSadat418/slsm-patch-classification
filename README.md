@@ -16,8 +16,11 @@ This project explores Multiple Instance Learning (MIL) approaches for classifyin
 Train a model using the provided annotation and fold assignment files. The
 training script trains on the fold specified by `--fold`. Use `--crossval` to
 run all five folds sequentially.
-Loss curves can optionally be saved with `--plot-loss` and AUC curves with
-`--plot-auc`.
+Loss curves can optionally be saved with `--plot-loss`, AUC curves with
+`--plot-auc`, and ROC curves with `--plot-roc`. ROC plots include a dashed
+diagonal reference line and display the AUC value on the plot. When running
+five-fold cross validation with `--crossval` and `--plot-roc`, an additional
+plot will show all fold ROC curves along with the mean curve and AUC.
 
 ```bash
 python src/train.py (associated arguments)
