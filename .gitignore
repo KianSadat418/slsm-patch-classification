@@ -1,7 +1,7 @@
 # Data, results folders, model weights, and images
 data/
 results/
-.png
+*.png
 .DS_Store
 *.pt
 
