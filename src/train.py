@@ -218,6 +218,8 @@ def main():
             import numpy as np
             import matplotlib.pyplot as plt
 
+            plt.figure()
+
             mean_fpr = np.linspace(0.0, 1.0, 100)
             tprs = []
             aucs = []
