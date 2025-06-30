@@ -42,7 +42,7 @@ class CrossFoldDataset(Dataset):
 
     def __init__(self, annotations_csv: Path, patch_dir: Path, bag_ids, transform=None):
         self.transform = transform
-        self.patch_dir = Path(patch_dir) / "features"
+        self.patch_dir = Path(patch_dir)
 
         df = pd.read_csv(annotations_csv)
         self.label_map = {

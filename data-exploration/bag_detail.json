@@ -1,0 +1,4672 @@
+[
+  {
+    "biopsy_id": "Biopsy1_19",
+    "mean_entropy": -1239.6477055818189,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_20",
+    "mean_entropy": -783.8665625503036,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_21",
+    "mean_entropy": -807.975886330278,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_22",
+    "mean_entropy": -812.6114422237198,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_23",
+    "mean_entropy": -914.8928717493889,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_24",
+    "mean_entropy": -905.337068287527,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_25",
+    "mean_entropy": -905.3947038910553,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_26",
+    "mean_entropy": -881.4639426066444,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_27",
+    "mean_entropy": -773.9417533319582,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_28",
+    "mean_entropy": -783.4798298522621,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_7",
+    "mean_entropy": -1030.3813121447204,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_8",
+    "mean_entropy": -1034.9041685202267,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_9",
+    "mean_entropy": -942.9327310656596,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_10",
+    "mean_entropy": -758.5986705553105,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_11",
+    "mean_entropy": -784.2993562023463,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_12",
+    "mean_entropy": -882.7110207714354,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_14",
+    "mean_entropy": -871.8083032777126,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_2",
+    "mean_entropy": -899.2096972576085,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_23",
+    "mean_entropy": -908.331538431531,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_24",
+    "mean_entropy": -891.4254361659307,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_3",
+    "mean_entropy": -954.9147806922035,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_4",
+    "mean_entropy": -949.2097194443072,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_5",
+    "mean_entropy": -916.7648756374731,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_6",
+    "mean_entropy": -837.4850520281765,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_7",
+    "mean_entropy": -797.7500949654439,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_8",
+    "mean_entropy": -765.0991045599137,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_9",
+    "mean_entropy": -777.409707473134,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_13",
+    "mean_entropy": -764.5459443305015,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_14",
+    "mean_entropy": -712.3994259503022,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_15",
+    "mean_entropy": -730.2365092481559,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_16",
+    "mean_entropy": -709.4836502688374,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_17",
+    "mean_entropy": -731.7372626305034,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_18",
+    "mean_entropy": -748.2875430270062,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_19",
+    "mean_entropy": -719.0722891994102,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_20",
+    "mean_entropy": -677.3017991355025,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_21",
+    "mean_entropy": -628.3296388803453,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_22",
+    "mean_entropy": -699.116347574688,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_23",
+    "mean_entropy": -686.7255019717754,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_24",
+    "mean_entropy": -692.0797081368821,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_25",
+    "mean_entropy": -655.805041290243,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_26",
+    "mean_entropy": -722.4094798342717,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_27",
+    "mean_entropy": -784.4378107764189,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_28",
+    "mean_entropy": -712.7146886524187,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_29",
+    "mean_entropy": -698.1497488872245,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_30",
+    "mean_entropy": -684.4583679887894,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_31",
+    "mean_entropy": -693.2140170518796,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_32",
+    "mean_entropy": -683.1807343254342,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_33",
+    "mean_entropy": -617.0801672221312,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_16",
+    "mean_entropy": -910.8753445075465,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_17",
+    "mean_entropy": -912.892727934275,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_18",
+    "mean_entropy": -874.8433854403715,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_19",
+    "mean_entropy": -835.1198011720747,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_20",
+    "mean_entropy": -858.4183576068298,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_22",
+    "mean_entropy": -894.5353415759605,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_24",
+    "mean_entropy": -963.4294453765748,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_27",
+    "mean_entropy": -940.9958767194319,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_28",
+    "mean_entropy": -842.490461134817,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_29",
+    "mean_entropy": -941.464543886978,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_30",
+    "mean_entropy": -758.4855542831544,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_31",
+    "mean_entropy": -915.1051554858168,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_32",
+    "mean_entropy": -789.1889438305477,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_33",
+    "mean_entropy": -802.7536209944674,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_34",
+    "mean_entropy": -963.2416486253844,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_35",
+    "mean_entropy": -899.8716986564056,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_36",
+    "mean_entropy": -963.1029908556947,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_37",
+    "mean_entropy": -907.9414266627459,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_38",
+    "mean_entropy": -775.61391499363,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_28",
+    "mean_entropy": -873.1665795878316,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_29",
+    "mean_entropy": -918.1005137606589,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_32",
+    "mean_entropy": -1123.3110925518397,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_27",
+    "mean_entropy": -801.5344560563797,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_11",
+    "mean_entropy": -758.1826714711653,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_12",
+    "mean_entropy": -716.1940294072152,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_13",
+    "mean_entropy": -694.6513352303,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_14",
+    "mean_entropy": -684.7190803600793,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_15",
+    "mean_entropy": -643.9644456326532,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_16",
+    "mean_entropy": -692.4905088193703,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_17",
+    "mean_entropy": -819.6498808003666,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_18",
+    "mean_entropy": -909.7771229642555,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_19",
+    "mean_entropy": -969.4937458883946,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_20",
+    "mean_entropy": -945.2544884725595,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_21",
+    "mean_entropy": -830.2275649284518,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_22",
+    "mean_entropy": -827.1105162165447,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_23",
+    "mean_entropy": -809.1470742395436,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_30",
+    "mean_entropy": -763.029920866488,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_31",
+    "mean_entropy": -828.442885242504,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_33",
+    "mean_entropy": -965.9201243542957,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_34",
+    "mean_entropy": -1038.4305951822548,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_35",
+    "mean_entropy": -984.1434833934544,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_36",
+    "mean_entropy": -967.7749997557896,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_10",
+    "mean_entropy": -928.408571783624,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_19",
+    "mean_entropy": -707.2686076090968,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_20",
+    "mean_entropy": -723.3984503083043,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_21",
+    "mean_entropy": -687.9042755877138,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_22",
+    "mean_entropy": -780.423344007229,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_23",
+    "mean_entropy": -729.7183521834772,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_34",
+    "mean_entropy": -867.6752343001964,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_8",
+    "mean_entropy": -832.5072389456843,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_9",
+    "mean_entropy": -785.2684691854809,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_0",
+    "mean_entropy": -778.3248917698014,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_1",
+    "mean_entropy": -708.5496639808274,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_2",
+    "mean_entropy": -700.644304180401,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_11",
+    "mean_entropy": -684.1876239469691,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_12",
+    "mean_entropy": -727.154455279446,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_13",
+    "mean_entropy": -719.4637749120412,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_14",
+    "mean_entropy": -690.2857643216696,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_15",
+    "mean_entropy": -706.5522688488982,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_16",
+    "mean_entropy": -648.9499300643822,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_18",
+    "mean_entropy": -479.17627909121285,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_19",
+    "mean_entropy": -459.2230083974141,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_20",
+    "mean_entropy": -482.7701991032505,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_21",
+    "mean_entropy": -495.6075132402981,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_22",
+    "mean_entropy": -520.7599867584515,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_23",
+    "mean_entropy": -534.7686833571305,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_24",
+    "mean_entropy": -549.7427489981748,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_25",
+    "mean_entropy": -630.6224817575592,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_26",
+    "mean_entropy": -656.2128737115466,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_27",
+    "mean_entropy": -717.4573252311613,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_28",
+    "mean_entropy": -748.5553165066665,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_29",
+    "mean_entropy": -742.6967975457385,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_30",
+    "mean_entropy": -693.8191541644178,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_10",
+    "mean_entropy": -471.8775286529283,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_11",
+    "mean_entropy": -502.7142409881563,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_12",
+    "mean_entropy": -535.54762063007,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_13",
+    "mean_entropy": -518.0523550021239,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_14",
+    "mean_entropy": -517.7696413426811,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_15",
+    "mean_entropy": -566.7770016193881,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_16",
+    "mean_entropy": -613.4411652540213,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_17",
+    "mean_entropy": -606.524321872816,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_18",
+    "mean_entropy": -556.6559455645681,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_19",
+    "mean_entropy": -624.99651985667,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_20",
+    "mean_entropy": -550.8431784620332,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_21",
+    "mean_entropy": -652.6229188693587,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_22",
+    "mean_entropy": -718.9591604942422,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_9",
+    "mean_entropy": -571.2836229594582,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_10",
+    "mean_entropy": -680.324906510894,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_12",
+    "mean_entropy": -743.4144083478246,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_23",
+    "mean_entropy": -695.2271372678248,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_24",
+    "mean_entropy": -766.4879152507797,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_26",
+    "mean_entropy": -644.5633331407114,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_27",
+    "mean_entropy": -698.1863978087823,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_28",
+    "mean_entropy": -831.8935421696224,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_29",
+    "mean_entropy": -810.6776925465413,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_34",
+    "mean_entropy": -610.3295356680442,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_35",
+    "mean_entropy": -604.9130008698766,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_36",
+    "mean_entropy": -668.9157223836612,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_37",
+    "mean_entropy": -618.5124888792398,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_27",
+    "mean_entropy": -505.5147784365091,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_30",
+    "mean_entropy": -587.194701001381,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_31",
+    "mean_entropy": -571.9080969755933,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_54",
+    "mean_entropy": -739.8248030990959,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_28",
+    "mean_entropy": -458.27508594516485,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_10",
+    "mean_entropy": -860.1150255170987,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_11",
+    "mean_entropy": -858.5732221339603,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_12",
+    "mean_entropy": -852.9092882025614,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_13",
+    "mean_entropy": -698.2429989806878,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_14",
+    "mean_entropy": -689.1960122923822,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_15",
+    "mean_entropy": -763.9900383007358,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_16",
+    "mean_entropy": -799.1443075913103,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_21",
+    "mean_entropy": -788.839146868564,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_22",
+    "mean_entropy": -788.2791726049684,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_23",
+    "mean_entropy": -703.7821644325315,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_24",
+    "mean_entropy": -690.2459118008355,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_25",
+    "mean_entropy": -687.7011039424307,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_27",
+    "mean_entropy": -680.8242587301697,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_28",
+    "mean_entropy": -757.9162444725177,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_4",
+    "mean_entropy": -893.0547568847418,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_5",
+    "mean_entropy": -861.1754597866582,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_6",
+    "mean_entropy": -821.2697190628174,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_7",
+    "mean_entropy": -910.207515262477,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_8",
+    "mean_entropy": -900.9266700081655,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_9",
+    "mean_entropy": -863.8020891124895,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_16",
+    "mean_entropy": -691.6713446824313,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_17",
+    "mean_entropy": -731.7692385265177,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_18",
+    "mean_entropy": -746.8714223524173,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_19",
+    "mean_entropy": -819.9711572601159,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_20",
+    "mean_entropy": -837.3788367581593,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_21",
+    "mean_entropy": -919.5468632947154,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_24",
+    "mean_entropy": -847.1261595025896,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_25",
+    "mean_entropy": -802.218624326749,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_26",
+    "mean_entropy": -788.687557565916,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_27",
+    "mean_entropy": -732.8692351864054,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_17",
+    "mean_entropy": -552.5231742594757,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_18",
+    "mean_entropy": -554.5170559761357,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_19",
+    "mean_entropy": -565.8360505369701,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_20",
+    "mean_entropy": -688.1769352615005,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_21",
+    "mean_entropy": -523.4529691820376,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_22",
+    "mean_entropy": -596.7990818576134,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_35",
+    "mean_entropy": -895.4222568432009,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_37",
+    "mean_entropy": -855.6215822407106,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_38",
+    "mean_entropy": -809.9054289473995,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_39",
+    "mean_entropy": -741.3872975787945,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_42",
+    "mean_entropy": -800.0836272503242,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_19",
+    "mean_entropy": -711.1244528203573,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_20",
+    "mean_entropy": -862.5641541366208,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_21",
+    "mean_entropy": -756.1016709805392,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_23",
+    "mean_entropy": -777.8484996117946,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_24",
+    "mean_entropy": -685.5154160541123,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_25",
+    "mean_entropy": -590.622465262053,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_26",
+    "mean_entropy": -581.8793292214546,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_11",
+    "mean_entropy": -793.5165612754924,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_12",
+    "mean_entropy": -736.7669882377616,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_13",
+    "mean_entropy": -769.3774470191634,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_14",
+    "mean_entropy": -767.7189776624614,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_15",
+    "mean_entropy": -769.7657735014204,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_16",
+    "mean_entropy": -751.2167921616995,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_17",
+    "mean_entropy": -743.9202054035243,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_18",
+    "mean_entropy": -763.1871727729156,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_19",
+    "mean_entropy": -577.9306541827775,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_20",
+    "mean_entropy": -623.0000695900204,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_21",
+    "mean_entropy": -652.8422308288185,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_22",
+    "mean_entropy": -700.8672989096333,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_23",
+    "mean_entropy": -681.4120680181948,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_24",
+    "mean_entropy": -690.7342619067094,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_25",
+    "mean_entropy": -628.3062339520476,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_26",
+    "mean_entropy": -601.5753884472983,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_27",
+    "mean_entropy": -676.8807032509603,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_40",
+    "mean_entropy": -817.7593466783899,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_41",
+    "mean_entropy": -816.83856621969,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_42",
+    "mean_entropy": -752.9744977943944,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_43",
+    "mean_entropy": -640.8082825443623,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_10",
+    "mean_entropy": -705.4416415832843,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_11",
+    "mean_entropy": -700.3952229748093,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_13",
+    "mean_entropy": -676.6089539213557,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_15",
+    "mean_entropy": -615.0605333991342,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_23",
+    "mean_entropy": -716.4243669758864,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_25",
+    "mean_entropy": -727.5139361569143,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_4",
+    "mean_entropy": -784.6069178514615,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_8",
+    "mean_entropy": -698.5307086356256,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_9",
+    "mean_entropy": -688.5439043961536,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_14",
+    "mean_entropy": -723.9113641369138,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_15",
+    "mean_entropy": -659.9805015499762,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_16",
+    "mean_entropy": -624.3000346747183,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_17",
+    "mean_entropy": -592.2611793679854,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_18",
+    "mean_entropy": -563.4711461353088,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_19",
+    "mean_entropy": -598.273637256337,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_20",
+    "mean_entropy": -599.3063479255761,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_21",
+    "mean_entropy": -547.4005179831479,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_22",
+    "mean_entropy": -569.290865270035,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_12",
+    "mean_entropy": -652.9864222953051,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_13",
+    "mean_entropy": -661.2438471813193,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_14",
+    "mean_entropy": -615.9837835742148,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_15",
+    "mean_entropy": -610.4533445838364,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_16",
+    "mean_entropy": -591.729853986719,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_17",
+    "mean_entropy": -596.6403465840413,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_18",
+    "mean_entropy": -590.4571980980838,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_19",
+    "mean_entropy": -596.9325747473108,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_20",
+    "mean_entropy": -609.4070870798073,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_21",
+    "mean_entropy": -611.856962676867,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_22",
+    "mean_entropy": -650.2668149861536,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_23",
+    "mean_entropy": -610.7898603696917,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_24",
+    "mean_entropy": -607.518716230579,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_25",
+    "mean_entropy": -604.5489325980826,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_26",
+    "mean_entropy": -606.6077283977899,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_27",
+    "mean_entropy": -572.2932639193575,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_28",
+    "mean_entropy": -590.3971026454542,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_29",
+    "mean_entropy": -608.8790392015458,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_30",
+    "mean_entropy": -592.0116394727364,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_31",
+    "mean_entropy": -643.3856157601964,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_5",
+    "mean_entropy": -588.0143332430087,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_7",
+    "mean_entropy": -627.9007472361866,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_8",
+    "mean_entropy": -644.6219627821113,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_21",
+    "mean_entropy": -753.9268511362292,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_22",
+    "mean_entropy": -765.0696735449418,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_23",
+    "mean_entropy": -752.2161025462501,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_24",
+    "mean_entropy": -788.6341075221828,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_28",
+    "mean_entropy": -680.3668147776841,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_29",
+    "mean_entropy": -661.3616319955938,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_30",
+    "mean_entropy": -580.8880252912272,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_41",
+    "mean_entropy": -653.4164132545371,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_42",
+    "mean_entropy": -624.4625514574195,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_43",
+    "mean_entropy": -611.4635498227806,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_44",
+    "mean_entropy": -600.5446906983027,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_45",
+    "mean_entropy": -622.447405692609,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_46",
+    "mean_entropy": -621.2213230927955,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_8",
+    "mean_entropy": -776.4811041112798,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_9",
+    "mean_entropy": -721.5066613717795,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_18",
+    "mean_entropy": -952.0003413197334,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_19",
+    "mean_entropy": -938.2388300508931,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_2",
+    "mean_entropy": -609.0837323788577,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_20",
+    "mean_entropy": -962.2596272273436,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_21",
+    "mean_entropy": -939.3246953883747,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_22",
+    "mean_entropy": -894.5879751098229,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_23",
+    "mean_entropy": -820.6379957000927,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_26",
+    "mean_entropy": -666.3234974494001,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_27",
+    "mean_entropy": -614.6632997419559,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_3",
+    "mean_entropy": -619.8306674471744,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_4",
+    "mean_entropy": -624.3050026968092,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_5",
+    "mean_entropy": -575.169463127803,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_6",
+    "mean_entropy": -559.5271848682867,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_37",
+    "mean_entropy": -507.47482998303116,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_39",
+    "mean_entropy": -570.8951182117473,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_52",
+    "mean_entropy": -652.469806540382,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_53",
+    "mean_entropy": -610.5709381082488,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_54",
+    "mean_entropy": -590.2608116603543,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_10",
+    "mean_entropy": -767.4870619515536,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_11",
+    "mean_entropy": -797.6086165975249,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_12",
+    "mean_entropy": -772.1763361076272,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_13",
+    "mean_entropy": -733.8480714307578,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_14",
+    "mean_entropy": -755.1416724612952,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_15",
+    "mean_entropy": -795.582813618998,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_16",
+    "mean_entropy": -738.6028521688235,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_17",
+    "mean_entropy": -784.2036299954697,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_8",
+    "mean_entropy": -763.4004206870704,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_9",
+    "mean_entropy": -694.5939778877436,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_0",
+    "mean_entropy": -545.1321616814253,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_1",
+    "mean_entropy": -606.363926049698,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_10",
+    "mean_entropy": -656.1569135396329,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_11",
+    "mean_entropy": -632.5577139501597,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_12",
+    "mean_entropy": -611.7521914468921,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_2",
+    "mean_entropy": -639.7433639893675,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_3",
+    "mean_entropy": -636.7292922565501,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_6",
+    "mean_entropy": -658.5633633453132,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_7",
+    "mean_entropy": -657.7321524424165,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_8",
+    "mean_entropy": -669.8836386801424,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_9",
+    "mean_entropy": -673.9762664886982,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_21",
+    "mean_entropy": -663.0664289759943,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_22",
+    "mean_entropy": -663.2018922112011,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_23",
+    "mean_entropy": -646.8960090039562,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_24",
+    "mean_entropy": -547.340096637939,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_25",
+    "mean_entropy": -576.9770933904397,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_23",
+    "mean_entropy": -597.2069038379307,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_24",
+    "mean_entropy": -590.0438692032478,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_25",
+    "mean_entropy": -620.2596836427024,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_26",
+    "mean_entropy": -735.2292748680422,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_11",
+    "mean_entropy": -674.3377163143618,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_12",
+    "mean_entropy": -658.4138283384589,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_13",
+    "mean_entropy": -612.0692608559716,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_14",
+    "mean_entropy": -629.6005006933908,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_15",
+    "mean_entropy": -572.6212610785585,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_41",
+    "mean_entropy": -780.2519703703829,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_42",
+    "mean_entropy": -448.4222221314737,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_9",
+    "mean_entropy": -719.8734876559793,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_27",
+    "mean_entropy": -401.2403072285951,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_12",
+    "mean_entropy": -677.9905540441625,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_16",
+    "mean_entropy": -645.4134845988254,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_17",
+    "mean_entropy": -667.482735108357,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_18",
+    "mean_entropy": -574.908123913082,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_19",
+    "mean_entropy": -621.3810308591699,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_20",
+    "mean_entropy": -615.3181403613912,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_21",
+    "mean_entropy": -496.70136333076744,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_22",
+    "mean_entropy": -396.93579172766835,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_24",
+    "mean_entropy": -437.8455185634863,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_6",
+    "mean_entropy": -640.4721117801569,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_7",
+    "mean_entropy": -578.0843238650045,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_8",
+    "mean_entropy": -626.8183294826674,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_9",
+    "mean_entropy": -646.8340297248631,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_15",
+    "mean_entropy": -570.6619183508406,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_16",
+    "mean_entropy": -611.0304793340473,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_17",
+    "mean_entropy": -647.6311172541405,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_18",
+    "mean_entropy": -802.3597762836356,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_19",
+    "mean_entropy": -715.431459618225,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_10",
+    "mean_entropy": -724.9194928190027,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_11",
+    "mean_entropy": -796.0419645521074,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_12",
+    "mean_entropy": -730.1149894592352,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_13",
+    "mean_entropy": -758.0320767105695,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_14",
+    "mean_entropy": -790.758872485666,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_15",
+    "mean_entropy": -744.3117787043401,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_16",
+    "mean_entropy": -709.4862003257235,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_19",
+    "mean_entropy": -689.5243273663909,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_20",
+    "mean_entropy": -644.0836760315383,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_21",
+    "mean_entropy": -716.5445958089078,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_22",
+    "mean_entropy": -706.3614707444264,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_8",
+    "mean_entropy": -873.7004048844639,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_9",
+    "mean_entropy": -776.1810929144049,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_27",
+    "mean_entropy": -288.7047016886017,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_28",
+    "mean_entropy": -226.42780149261577,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_10",
+    "mean_entropy": -740.1106103231316,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_11",
+    "mean_entropy": -708.6240734009114,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_12",
+    "mean_entropy": -731.2777027730415,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_13",
+    "mean_entropy": -720.8848412088468,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_14",
+    "mean_entropy": -662.1272318302001,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_15",
+    "mean_entropy": -670.0578821554911,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_16",
+    "mean_entropy": -667.3279158212995,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_17",
+    "mean_entropy": -673.8001184384301,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_18",
+    "mean_entropy": -680.5629249804772,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_19",
+    "mean_entropy": -670.9567012672222,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_28",
+    "mean_entropy": -607.9242228847555,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_29",
+    "mean_entropy": -521.2888477884654,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_34",
+    "mean_entropy": -838.1243336177474,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_9",
+    "mean_entropy": -729.2907429443243,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_13",
+    "mean_entropy": -676.0129728660689,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_14",
+    "mean_entropy": -719.2706029655103,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_15",
+    "mean_entropy": -649.0400373890725,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_16",
+    "mean_entropy": -608.3482846976935,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_18",
+    "mean_entropy": -644.4021811956898,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_19",
+    "mean_entropy": -632.5445388402189,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_20",
+    "mean_entropy": -666.0570122368638,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_21",
+    "mean_entropy": -665.613958766316,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_22",
+    "mean_entropy": -628.5693853988871,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_23",
+    "mean_entropy": -609.4148047165288,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_25",
+    "mean_entropy": -620.5871544019069,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_27",
+    "mean_entropy": -487.9329943578332,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_49",
+    "mean_entropy": -403.26541978297445,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_18",
+    "mean_entropy": -702.9501663824287,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_20",
+    "mean_entropy": -662.0674317982737,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_21",
+    "mean_entropy": -596.9313162480183,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_5",
+    "mean_entropy": -625.3642252851436,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_6",
+    "mean_entropy": -554.548856155154,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_9",
+    "mean_entropy": -620.333463804649,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_4",
+    "mean_entropy": -571.3258290679205,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_5",
+    "mean_entropy": -675.58295960541,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_24",
+    "mean_entropy": -689.2766403960295,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_25",
+    "mean_entropy": -657.1383400712425,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_9",
+    "mean_entropy": -607.4057824495096,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_10",
+    "mean_entropy": -482.4649593430439,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_11",
+    "mean_entropy": -743.9154552044639,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_15",
+    "mean_entropy": -589.359465051872,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_16",
+    "mean_entropy": -605.7460714375427,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_17",
+    "mean_entropy": -641.6485138546747,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_18",
+    "mean_entropy": -690.8826636402225,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_19",
+    "mean_entropy": -640.2878428941154,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_22",
+    "mean_entropy": -616.2993019229889,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_23",
+    "mean_entropy": -633.0838829354702,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_24",
+    "mean_entropy": -587.9037608838087,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_25",
+    "mean_entropy": -619.9095713057429,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_26",
+    "mean_entropy": -601.4828478388486,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_27",
+    "mean_entropy": -597.689300468556,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_29",
+    "mean_entropy": -572.306513914279,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_30",
+    "mean_entropy": -560.4323013641342,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_31",
+    "mean_entropy": -640.8715490604144,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_32",
+    "mean_entropy": -623.5429950352195,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_33",
+    "mean_entropy": -552.67718578705,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_34",
+    "mean_entropy": -721.7387339274944,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_9",
+    "mean_entropy": -542.3178795573281,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_18",
+    "mean_entropy": -795.4781771169879,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_10",
+    "mean_entropy": -835.1017068519124,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_15",
+    "mean_entropy": -693.0856186849896,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_16",
+    "mean_entropy": -675.6121076311057,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_17",
+    "mean_entropy": -759.758197204805,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_20",
+    "mean_entropy": -778.3716023608565,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_21",
+    "mean_entropy": -852.8599067021853,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_22",
+    "mean_entropy": -1060.6750524702375,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_8",
+    "mean_entropy": -710.8987197274882,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_9",
+    "mean_entropy": -690.715906258884,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_10",
+    "mean_entropy": -822.6778012314196,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_11",
+    "mean_entropy": -877.6778109718808,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_12",
+    "mean_entropy": -904.1697703731504,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_14",
+    "mean_entropy": -807.1097466212036,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_15",
+    "mean_entropy": -747.9769220643997,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_16",
+    "mean_entropy": -642.3805315698132,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_21",
+    "mean_entropy": -637.0001588685066,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_22",
+    "mean_entropy": -686.0652307652151,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_27",
+    "mean_entropy": -424.9214606424242,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_16",
+    "mean_entropy": -597.7486269806521,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_17",
+    "mean_entropy": -650.4511642792688,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_18",
+    "mean_entropy": -734.836206423914,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_19",
+    "mean_entropy": -784.3433405828583,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_20",
+    "mean_entropy": -706.5964944409263,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_21",
+    "mean_entropy": -790.2774670628403,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_22",
+    "mean_entropy": -763.9581074926676,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_10",
+    "mean_entropy": -649.1210635749761,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_11",
+    "mean_entropy": -626.0830784490943,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_13",
+    "mean_entropy": -667.8256202069925,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_14",
+    "mean_entropy": -698.1993179867061,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_16",
+    "mean_entropy": -651.0297527289584,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_17",
+    "mean_entropy": -684.2936361499986,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_18",
+    "mean_entropy": -691.838885842824,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_19",
+    "mean_entropy": -683.8240899176014,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_20",
+    "mean_entropy": -654.8422922222728,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_21",
+    "mean_entropy": -602.1554019246732,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_22",
+    "mean_entropy": -529.242691779726,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_30",
+    "mean_entropy": -540.1769798196887,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_31",
+    "mean_entropy": -523.9158136876919,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_32",
+    "mean_entropy": -497.2499387970008,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_33",
+    "mean_entropy": -499.61505867055354,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_34",
+    "mean_entropy": -508.82765191986675,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_36",
+    "mean_entropy": -519.0221619297657,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_38",
+    "mean_entropy": -483.84048476737155,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_5",
+    "mean_entropy": -652.468616117741,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_6",
+    "mean_entropy": -675.9918384097423,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_1",
+    "mean_entropy": -859.1593448790882,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_11",
+    "mean_entropy": -666.8806655050674,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_12",
+    "mean_entropy": -684.0154301378424,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_13",
+    "mean_entropy": -708.3100863357613,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_14",
+    "mean_entropy": -714.5381275011815,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_15",
+    "mean_entropy": -705.4853297572582,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_16",
+    "mean_entropy": -623.1348273083307,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_19",
+    "mean_entropy": -522.1706139143396,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_2",
+    "mean_entropy": -796.9564643500865,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_20",
+    "mean_entropy": -542.3635248109543,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_3",
+    "mean_entropy": -721.2990035014507,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_4",
+    "mean_entropy": -746.5169373929762,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_5",
+    "mean_entropy": -747.8589005202299,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_6",
+    "mean_entropy": -742.1646851308451,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_7",
+    "mean_entropy": -717.9693823772363,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_8",
+    "mean_entropy": -708.1059433574854,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_9",
+    "mean_entropy": -683.4702909304829,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_15",
+    "mean_entropy": -736.3789976508073,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_16",
+    "mean_entropy": -721.0613951062495,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_27",
+    "mean_entropy": -625.4312707785117,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_28",
+    "mean_entropy": -645.9942395615371,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_30",
+    "mean_entropy": -629.3257175712278,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_33",
+    "mean_entropy": -627.161157334898,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_10",
+    "mean_entropy": -641.4994024114997,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_12",
+    "mean_entropy": -630.9469781018838,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_14",
+    "mean_entropy": -609.3862952010434,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_15",
+    "mean_entropy": -604.20515322406,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_16",
+    "mean_entropy": -547.1756975030733,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_17",
+    "mean_entropy": -555.7272113229751,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_18",
+    "mean_entropy": -522.6588072893198,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_8",
+    "mean_entropy": -600.2640033556872,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_9",
+    "mean_entropy": -636.9547660691499,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_10",
+    "mean_entropy": -338.62267277659765,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_11",
+    "mean_entropy": -293.31396179624943,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_12",
+    "mean_entropy": -281.03420596462377,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_13",
+    "mean_entropy": -298.70730570858285,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_14",
+    "mean_entropy": -259.73190087606514,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_15",
+    "mean_entropy": -264.38252069558627,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_16",
+    "mean_entropy": -232.24598226794967,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_18",
+    "mean_entropy": -252.71954511463673,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_19",
+    "mean_entropy": -308.34664313303205,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_20",
+    "mean_entropy": -303.58589603797384,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_21",
+    "mean_entropy": -236.5891838266972,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_25",
+    "mean_entropy": -155.5550436470583,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_7",
+    "mean_entropy": -363.57954146074417,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_8",
+    "mean_entropy": -300.23287633459375,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_9",
+    "mean_entropy": -291.9734349090696,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_10",
+    "mean_entropy": -723.1478308155913,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_11",
+    "mean_entropy": -624.9035655119357,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_12",
+    "mean_entropy": -716.4784115374255,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_13",
+    "mean_entropy": -739.6906131984898,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_14",
+    "mean_entropy": -686.210519909587,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_15",
+    "mean_entropy": -619.6242606490533,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_16",
+    "mean_entropy": -653.4256195696671,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_17",
+    "mean_entropy": -687.6561116712492,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_18",
+    "mean_entropy": -616.7324527383838,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_19",
+    "mean_entropy": -687.5362475159877,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_20",
+    "mean_entropy": -722.0662243004529,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_21",
+    "mean_entropy": -700.945592691111,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_22",
+    "mean_entropy": -672.4179723880105,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_23",
+    "mean_entropy": -698.0099928190205,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_24",
+    "mean_entropy": -681.2437305443217,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_25",
+    "mean_entropy": -682.099749879198,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_16",
+    "mean_entropy": -759.6560320791588,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_18",
+    "mean_entropy": -724.3174937361675,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_20",
+    "mean_entropy": -771.9871321770888,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_22",
+    "mean_entropy": -900.7176064787395,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_7",
+    "mean_entropy": -780.5120348078433,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_10",
+    "mean_entropy": -640.0366825990607,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_11",
+    "mean_entropy": -578.541410860151,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_22",
+    "mean_entropy": -551.8112258770852,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_25",
+    "mean_entropy": -451.32738205672365,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_10",
+    "mean_entropy": -605.1105893926351,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_11",
+    "mean_entropy": -575.9496093224353,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_12",
+    "mean_entropy": -518.913673129686,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_13",
+    "mean_entropy": -530.5021539855395,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_15",
+    "mean_entropy": -570.2493824452442,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_16",
+    "mean_entropy": -529.7248339986998,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_17",
+    "mean_entropy": -505.93602600027236,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_18",
+    "mean_entropy": -525.3030401057656,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_19",
+    "mean_entropy": -470.166474114444,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_20",
+    "mean_entropy": -469.641476433324,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_21",
+    "mean_entropy": -460.63753278628155,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_25",
+    "mean_entropy": -393.2652806206826,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_26",
+    "mean_entropy": -440.74054746178336,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_27",
+    "mean_entropy": -408.03371317103074,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_29",
+    "mean_entropy": -471.14424788866876,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_8",
+    "mean_entropy": -542.178681645467,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_9",
+    "mean_entropy": -588.5584393426998,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_10",
+    "mean_entropy": -660.3277688955047,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_11",
+    "mean_entropy": -624.7424211706896,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_12",
+    "mean_entropy": -654.1160641921981,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_13",
+    "mean_entropy": -683.8796085753452,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_14",
+    "mean_entropy": -650.4543422304037,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_15",
+    "mean_entropy": -676.4244314361927,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_16",
+    "mean_entropy": -728.0396395200759,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_17",
+    "mean_entropy": -686.1547959828715,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_18",
+    "mean_entropy": -521.8748658673621,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_19",
+    "mean_entropy": -586.1387806507314,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_20",
+    "mean_entropy": -594.3312220832761,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_21",
+    "mean_entropy": -622.935033794301,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_22",
+    "mean_entropy": -646.1372061375548,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_23",
+    "mean_entropy": -640.0175082679757,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_24",
+    "mean_entropy": -645.5658376845768,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_25",
+    "mean_entropy": -591.5651361439568,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_26",
+    "mean_entropy": -589.2386812786118,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_27",
+    "mean_entropy": -606.3326909398343,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_28",
+    "mean_entropy": -589.3643341018227,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_29",
+    "mean_entropy": -521.8891642053579,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_8",
+    "mean_entropy": -647.5233524911364,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy7_9",
+    "mean_entropy": -641.4770856192848,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy8_10",
+    "mean_entropy": -627.3434490743041,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy8_11",
+    "mean_entropy": -664.340182000108,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy8_12",
+    "mean_entropy": -655.118453619265,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy8_13",
+    "mean_entropy": -603.1733421848168,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy8_14",
+    "mean_entropy": -622.778353824074,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy8_15",
+    "mean_entropy": -627.1107349642183,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy8_16",
+    "mean_entropy": -596.4711763856633,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy8_17",
+    "mean_entropy": -556.6355531095976,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy8_18",
+    "mean_entropy": -531.387721339262,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy8_19",
+    "mean_entropy": -578.0860623306717,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy8_20",
+    "mean_entropy": -524.9948927166149,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy8_21",
+    "mean_entropy": -627.2958111244918,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_27",
+    "mean_entropy": -792.9366737064945,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_28",
+    "mean_entropy": -774.661069734816,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_29",
+    "mean_entropy": -747.0310973497916,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_30",
+    "mean_entropy": -681.8218719558088,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_31",
+    "mean_entropy": -619.4371439124529,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_32",
+    "mean_entropy": -594.1954132063726,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_33",
+    "mean_entropy": -577.4999873964364,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_34",
+    "mean_entropy": -533.7312803798918,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_35",
+    "mean_entropy": -510.13310459519437,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_36",
+    "mean_entropy": -451.63230550485184,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_37",
+    "mean_entropy": -460.33636385014836,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_38",
+    "mean_entropy": -453.80326392085317,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_10",
+    "mean_entropy": -649.3534349924381,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_11",
+    "mean_entropy": -732.7571784831891,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_12",
+    "mean_entropy": -786.2085500100682,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_16",
+    "mean_entropy": -765.9648079914773,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_17",
+    "mean_entropy": -801.327174914424,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_18",
+    "mean_entropy": -744.0495628609674,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_19",
+    "mean_entropy": -795.4836922930779,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_20",
+    "mean_entropy": -768.3387385582118,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_11",
+    "mean_entropy": -768.7946662028769,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_15",
+    "mean_entropy": -597.1314725563614,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_19",
+    "mean_entropy": -692.7548897818979,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_4",
+    "mean_entropy": -706.4855810386628,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_5",
+    "mean_entropy": -790.9172638527197,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_6",
+    "mean_entropy": -736.4582623886389,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_7",
+    "mean_entropy": -729.3238659626309,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_8",
+    "mean_entropy": -699.3229836454415,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_9",
+    "mean_entropy": -662.8998749110315,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_10",
+    "mean_entropy": -657.9426912114245,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_11",
+    "mean_entropy": -628.5436769265241,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_12",
+    "mean_entropy": -615.2637020199143,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_6",
+    "mean_entropy": -557.1403946457536,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_10",
+    "mean_entropy": -522.7979591556617,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_11",
+    "mean_entropy": -546.2182961559552,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_13",
+    "mean_entropy": -540.5747903971551,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_0",
+    "mean_entropy": -587.3416940717661,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_1",
+    "mean_entropy": -601.5926366456322,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_11",
+    "mean_entropy": -620.6528885315445,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_12",
+    "mean_entropy": -521.3703694465231,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_13",
+    "mean_entropy": -555.401408726872,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_16",
+    "mean_entropy": -645.5492420672286,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_11",
+    "mean_entropy": -620.6528885315445,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy6_14",
+    "mean_entropy": -515.3729537685243,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_10",
+    "mean_entropy": -641.339833269785,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_11",
+    "mean_entropy": -657.1324916929161,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_12",
+    "mean_entropy": -543.846137373248,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_13",
+    "mean_entropy": -582.4038977271795,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_15",
+    "mean_entropy": -612.854081853863,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_16",
+    "mean_entropy": -644.6446456069095,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_17",
+    "mean_entropy": -709.3236526155207,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_18",
+    "mean_entropy": -713.1335452106309,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_21",
+    "mean_entropy": -612.7580004247637,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_22",
+    "mean_entropy": -580.2449982786768,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_23",
+    "mean_entropy": -601.3076445649426,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_24",
+    "mean_entropy": -753.777284923639,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_25",
+    "mean_entropy": -829.7207204030341,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_26",
+    "mean_entropy": -851.3585999320436,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_6",
+    "mean_entropy": -649.7178510201479,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_7",
+    "mean_entropy": -595.0315350549854,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_8",
+    "mean_entropy": -653.2354549778981,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_9",
+    "mean_entropy": -658.1188667621661,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_1",
+    "mean_entropy": -542.344762000173,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_12",
+    "mean_entropy": -507.8387917497972,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_14",
+    "mean_entropy": -624.253163100604,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_2",
+    "mean_entropy": -510.16979206155236,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_5",
+    "mean_entropy": -544.2903784979857,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_6",
+    "mean_entropy": -559.4767739209832,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_28",
+    "mean_entropy": -518.1957580213143,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_13",
+    "mean_entropy": -373.44322715427677,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_1",
+    "mean_entropy": -601.3776402443641,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_10",
+    "mean_entropy": -816.6424793509143,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_11",
+    "mean_entropy": -894.567063051906,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_12",
+    "mean_entropy": -930.4022073370338,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_13",
+    "mean_entropy": -920.3329764332677,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_14",
+    "mean_entropy": -895.0465123420826,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_10",
+    "mean_entropy": -674.6991589052991,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_19",
+    "mean_entropy": -638.6142882294141,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_2",
+    "mean_entropy": -773.8773453330848,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_20",
+    "mean_entropy": -622.5094222461014,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_21",
+    "mean_entropy": -624.6805858591392,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_4",
+    "mean_entropy": -615.2593905725048,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_9",
+    "mean_entropy": -596.5318141639968,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_1",
+    "mean_entropy": -580.1504291746758,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_13",
+    "mean_entropy": -667.2248494813285,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_14",
+    "mean_entropy": -616.0414839081574,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_15",
+    "mean_entropy": -641.9973732008145,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_16",
+    "mean_entropy": -674.9507921582035,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_17",
+    "mean_entropy": -666.4772040398334,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_18",
+    "mean_entropy": -598.7612521823721,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_19",
+    "mean_entropy": -580.374238654571,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_20",
+    "mean_entropy": -561.128206686755,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_21",
+    "mean_entropy": -564.2527059719274,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_22",
+    "mean_entropy": -650.0651968442344,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_26",
+    "mean_entropy": -640.160866262929,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_27",
+    "mean_entropy": -717.9602907373944,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_30",
+    "mean_entropy": -605.0812418185204,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_5",
+    "mean_entropy": -626.3721776725738,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_6",
+    "mean_entropy": -631.9506598441045,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_7",
+    "mean_entropy": -681.5476792807938,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_10",
+    "mean_entropy": -825.9318804947302,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_11",
+    "mean_entropy": -687.071720826202,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_12",
+    "mean_entropy": -673.4028387970072,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_4",
+    "mean_entropy": -836.4121676324031,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_5",
+    "mean_entropy": -905.6073020674364,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_6",
+    "mean_entropy": -921.3760040854677,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_8",
+    "mean_entropy": -779.8314526858312,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_20",
+    "mean_entropy": -612.3917606921129,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_32",
+    "mean_entropy": -905.7806182124851,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_34",
+    "mean_entropy": -1229.387676180258,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_35",
+    "mean_entropy": -1214.1706053145138,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_36",
+    "mean_entropy": -977.1184751336166,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_38",
+    "mean_entropy": -1198.4032761395802,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_39",
+    "mean_entropy": -1075.175708540582,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_40",
+    "mean_entropy": -1054.2794986641745,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_43",
+    "mean_entropy": -898.123533824869,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_44",
+    "mean_entropy": -692.2588736701575,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_45",
+    "mean_entropy": -752.305283365936,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_10",
+    "mean_entropy": -962.2950399146503,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_14",
+    "mean_entropy": -647.5853664935177,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_15",
+    "mean_entropy": -649.0606285847521,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_16",
+    "mean_entropy": -737.612988867792,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_17",
+    "mean_entropy": -638.8716481426344,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_18",
+    "mean_entropy": -592.2651140346134,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_19",
+    "mean_entropy": -522.113534200482,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_20",
+    "mean_entropy": -448.83407968340725,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_21",
+    "mean_entropy": -404.11151944997573,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_11",
+    "mean_entropy": -769.2059669294636,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_12",
+    "mean_entropy": -733.0677478601773,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_14",
+    "mean_entropy": -531.8838046103176,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_15",
+    "mean_entropy": -567.8390259721332,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_16",
+    "mean_entropy": -514.317055195641,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_17",
+    "mean_entropy": -547.2441934011549,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_18",
+    "mean_entropy": -562.7545653500748,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_19",
+    "mean_entropy": -569.9132548995009,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_20",
+    "mean_entropy": -588.0892864147052,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_10",
+    "mean_entropy": -658.8729807752582,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_12",
+    "mean_entropy": -706.0380652221818,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_13",
+    "mean_entropy": -747.3796977543927,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_14",
+    "mean_entropy": -732.6079835605699,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_15",
+    "mean_entropy": -688.4881156201932,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_16",
+    "mean_entropy": -646.626630775765,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_17",
+    "mean_entropy": -593.4366095215628,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_18",
+    "mean_entropy": -604.8649104432567,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_19",
+    "mean_entropy": -657.3583886281247,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_20",
+    "mean_entropy": -665.8212460195115,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_8",
+    "mean_entropy": -634.3477844671932,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_9",
+    "mean_entropy": -615.8910740941595,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_18",
+    "mean_entropy": -852.6992562242895,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_20",
+    "mean_entropy": -784.4509774874023,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_21",
+    "mean_entropy": -779.469432119751,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_15",
+    "mean_entropy": -463.61359445413274,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_16",
+    "mean_entropy": -804.5486522970402,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_17",
+    "mean_entropy": -764.510714903974,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_18",
+    "mean_entropy": -755.4112293060298,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_19",
+    "mean_entropy": -741.1784630012678,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_29",
+    "mean_entropy": -708.4503094422288,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_30",
+    "mean_entropy": -683.167000779561,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_31",
+    "mean_entropy": -646.3486602650238,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_32",
+    "mean_entropy": -652.7716554098201,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_34",
+    "mean_entropy": -656.926971610146,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_36",
+    "mean_entropy": -621.8898868971995,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_37",
+    "mean_entropy": -554.9035199110277,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_38",
+    "mean_entropy": -646.9526796978603,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_39",
+    "mean_entropy": -626.3779319661029,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_30",
+    "mean_entropy": -706.5898668572563,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_31",
+    "mean_entropy": -580.5159277902227,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_32",
+    "mean_entropy": -590.3937527017941,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_33",
+    "mean_entropy": -631.4689631260966,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_18",
+    "mean_entropy": -723.039238074597,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_7",
+    "mean_entropy": -790.9837513822027,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_8",
+    "mean_entropy": -756.7966873691463,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_9",
+    "mean_entropy": -749.6500099898942,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_10",
+    "mean_entropy": -811.3903873477559,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_11",
+    "mean_entropy": -864.9281975106289,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_12",
+    "mean_entropy": -873.5141515107377,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_13",
+    "mean_entropy": -883.9915727385853,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_14",
+    "mean_entropy": -870.4240889493948,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_15",
+    "mean_entropy": -883.8816720718816,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_16",
+    "mean_entropy": -862.4981968527989,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_17",
+    "mean_entropy": -870.8630471997983,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_18",
+    "mean_entropy": -882.8226492982124,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_19",
+    "mean_entropy": -877.0110981245241,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_20",
+    "mean_entropy": -789.9466468425593,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_21",
+    "mean_entropy": -753.0380313277435,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_22",
+    "mean_entropy": -858.0052215002902,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_23",
+    "mean_entropy": -922.6368696931365,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_24",
+    "mean_entropy": -899.722267917511,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_27",
+    "mean_entropy": -872.3182868418439,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_29",
+    "mean_entropy": -780.9224000909376,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_31",
+    "mean_entropy": -731.2428985959145,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_14",
+    "mean_entropy": -790.4652245269322,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_15",
+    "mean_entropy": -812.1466804732213,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_16",
+    "mean_entropy": -843.7954527299416,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_17",
+    "mean_entropy": -856.1847685546131,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_22",
+    "mean_entropy": -764.358240739667,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_23",
+    "mean_entropy": -780.6620592039786,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_24",
+    "mean_entropy": -634.531606144455,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_25",
+    "mean_entropy": -726.64769156921,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_26",
+    "mean_entropy": -750.2961516116077,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_27",
+    "mean_entropy": -798.1487144522634,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_28",
+    "mean_entropy": -823.4778288276443,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_29",
+    "mean_entropy": -864.7318007593876,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_30",
+    "mean_entropy": -803.2805297145303,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_31",
+    "mean_entropy": -825.9624066700408,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_32",
+    "mean_entropy": -749.1984784902522,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_33",
+    "mean_entropy": -741.2494842469707,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_34",
+    "mean_entropy": -740.0337988947106,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_35",
+    "mean_entropy": -768.1806803715489,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_36",
+    "mean_entropy": -753.4042047469783,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_37",
+    "mean_entropy": -734.6817968699493,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_38",
+    "mean_entropy": -688.8404413771037,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_39",
+    "mean_entropy": -639.1800446546754,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_40",
+    "mean_entropy": -749.5467250402107,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_41",
+    "mean_entropy": -857.1019284322794,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_42",
+    "mean_entropy": -915.3792776301676,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_44",
+    "mean_entropy": -878.9645889502553,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_10",
+    "mean_entropy": -698.2236197619516,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_11",
+    "mean_entropy": -638.558697796796,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_12",
+    "mean_entropy": -609.2456399835343,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_13",
+    "mean_entropy": -576.7076572574495,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_14",
+    "mean_entropy": -575.4517163092123,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_15",
+    "mean_entropy": -539.8144498189399,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_7",
+    "mean_entropy": -740.9236521134262,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_8",
+    "mean_entropy": -711.3140425528456,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_9",
+    "mean_entropy": -685.3098301786563,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_10",
+    "mean_entropy": -732.0397653267687,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_11",
+    "mean_entropy": -706.4675953715316,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_12",
+    "mean_entropy": -660.6177027280269,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_39",
+    "mean_entropy": -475.37071655897194,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_7",
+    "mean_entropy": -703.7959237334073,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_8",
+    "mean_entropy": -748.7137546714348,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_9",
+    "mean_entropy": -725.1011302175036,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_19",
+    "mean_entropy": -668.6298146730915,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_20",
+    "mean_entropy": -684.116917747305,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_21",
+    "mean_entropy": -654.6164818481329,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_22",
+    "mean_entropy": -666.8896469579283,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_23",
+    "mean_entropy": -615.5655157047482,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_24",
+    "mean_entropy": -626.1408817107358,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_25",
+    "mean_entropy": -607.3166968617847,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_26",
+    "mean_entropy": -514.9038537165138,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_1",
+    "mean_entropy": -683.4778119221487,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_2",
+    "mean_entropy": -738.1271780276259,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_2",
+    "mean_entropy": -479.1865223726288,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_23",
+    "mean_entropy": -380.80971340370263,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_25",
+    "mean_entropy": -552.6580318185042,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_26",
+    "mean_entropy": -596.9126792557046,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_27",
+    "mean_entropy": -558.9735606544664,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_28",
+    "mean_entropy": -526.960417329519,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_29",
+    "mean_entropy": -553.847669778515,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_30",
+    "mean_entropy": -635.1656741972001,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_14",
+    "mean_entropy": -693.4235075763161,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_15",
+    "mean_entropy": -705.9030482827461,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_19",
+    "mean_entropy": -652.8206409120824,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_20",
+    "mean_entropy": -673.5482613622682,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_21",
+    "mean_entropy": -729.3938694945128,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_22",
+    "mean_entropy": -706.9829544638685,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_23",
+    "mean_entropy": -791.2994068625779,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_25",
+    "mean_entropy": -624.9473925850303,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_11",
+    "mean_entropy": -629.1111071900671,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_12",
+    "mean_entropy": -631.8870889728572,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_13",
+    "mean_entropy": -548.4264572467089,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_14",
+    "mean_entropy": -500.191664844759,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_16",
+    "mean_entropy": -641.3303574994713,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_18",
+    "mean_entropy": -769.009041483694,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_19",
+    "mean_entropy": -707.5957646081248,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_20",
+    "mean_entropy": -671.4103719349064,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_23",
+    "mean_entropy": -652.7352286439345,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_24",
+    "mean_entropy": -636.9505033863377,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_25",
+    "mean_entropy": -661.9000440672855,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_28",
+    "mean_entropy": -603.1451828244487,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_17",
+    "mean_entropy": -631.4461468655569,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_18",
+    "mean_entropy": -648.4992284076791,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_19",
+    "mean_entropy": -569.3428565052698,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_20",
+    "mean_entropy": -609.8823427773361,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_31",
+    "mean_entropy": -670.9948474848508,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_32",
+    "mean_entropy": -677.4723051557233,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_33",
+    "mean_entropy": -640.6099009519634,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_34",
+    "mean_entropy": -663.6649841665121,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_37",
+    "mean_entropy": -637.2912943338158,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy5_39",
+    "mean_entropy": -609.5195767838032,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_16",
+    "mean_entropy": -523.3025418783398,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_17",
+    "mean_entropy": -539.9676538770861,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_18",
+    "mean_entropy": -560.1581202018723,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_16",
+    "mean_entropy": -592.02178561008,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_17",
+    "mean_entropy": -610.1306754682927,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_18",
+    "mean_entropy": -607.626889977277,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_19",
+    "mean_entropy": -555.16820352081,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_10",
+    "mean_entropy": -544.7277372436128,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_11",
+    "mean_entropy": -532.8008197931165,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_12",
+    "mean_entropy": -562.7631947939584,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_13",
+    "mean_entropy": -600.0791389372764,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_14",
+    "mean_entropy": -636.0602936662624,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_15",
+    "mean_entropy": -658.9156968681496,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_16",
+    "mean_entropy": -592.02178561008,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_17",
+    "mean_entropy": -610.1306754682927,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_18",
+    "mean_entropy": -607.626889977277,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_19",
+    "mean_entropy": -555.16820352081,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_20",
+    "mean_entropy": -609.9213213765316,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_21",
+    "mean_entropy": -642.372106298199,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_22",
+    "mean_entropy": -675.3771972519442,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_28",
+    "mean_entropy": -727.6274936728032,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_4",
+    "mean_entropy": -644.8165774537676,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_5",
+    "mean_entropy": -715.2358886831514,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_6",
+    "mean_entropy": -682.6138758229743,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy1_9",
+    "mean_entropy": -545.0465107441402,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_15",
+    "mean_entropy": -876.3369737483749,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_16",
+    "mean_entropy": -879.0814395759776,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_17",
+    "mean_entropy": -738.6404756060358,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_18",
+    "mean_entropy": -780.8477653295049,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy2_19",
+    "mean_entropy": -755.020285838613,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_14",
+    "mean_entropy": -748.9925980159403,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_15",
+    "mean_entropy": -648.3076397972835,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_16",
+    "mean_entropy": -580.1366412171055,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_17",
+    "mean_entropy": -581.1820611446063,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_18",
+    "mean_entropy": -618.5101566395806,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_19",
+    "mean_entropy": -602.3959494217816,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_21",
+    "mean_entropy": -584.1798088976275,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_22",
+    "mean_entropy": -713.4711494464686,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_23",
+    "mean_entropy": -665.5265028466031,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_24",
+    "mean_entropy": -674.4496649759071,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_25",
+    "mean_entropy": -673.2596500074297,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_26",
+    "mean_entropy": -701.4978790148791,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_27",
+    "mean_entropy": -716.853200653863,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_28",
+    "mean_entropy": -711.8151441476998,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_34",
+    "mean_entropy": -791.4571685262317,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy3_35",
+    "mean_entropy": -797.4975410594552,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_10",
+    "mean_entropy": -536.597485960431,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_11",
+    "mean_entropy": -531.1616214680823,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_12",
+    "mean_entropy": -543.6413061687754,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_16",
+    "mean_entropy": -614.2302832069212,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_17",
+    "mean_entropy": -607.6624796105043,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_18",
+    "mean_entropy": -608.553297543104,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_19",
+    "mean_entropy": -598.0127115896148,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_20",
+    "mean_entropy": -630.5815224062407,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_21",
+    "mean_entropy": -631.2272857970349,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_22",
+    "mean_entropy": -690.7858083554163,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_4",
+    "mean_entropy": -558.442801082533,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_5",
+    "mean_entropy": -738.2468653605995,
+    "low_detail_frac": 1.0
+  },
+  {
+    "biopsy_id": "Biopsy4_6",
+    "mean_entropy": -707.1497234863667,
+    "low_detail_frac": 1.0
+  }
+]
