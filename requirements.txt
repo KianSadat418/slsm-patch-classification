@@ -6,7 +6,3 @@ Pillow
 numpy<2
 scikit-learn
 matplotlib
-
-
-# Development
-pytest
