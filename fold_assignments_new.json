@@ -761,7 +761,6 @@
       "StudyLSM027/Biopsy3_21"
     ],
     "test": [
-      "StudyLSM001/Biopsy1_19",
       "StudyLSM001/Biopsy1_20",
       "StudyLSM001/Biopsy1_21",
       "StudyLSM001/Biopsy1_22",
@@ -958,7 +957,6 @@
   },
   "fold2": {
     "train": [
-      "StudyLSM001/Biopsy1_19",
       "StudyLSM001/Biopsy1_20",
       "StudyLSM001/Biopsy1_21",
       "StudyLSM001/Biopsy1_22",
@@ -1915,7 +1913,6 @@
   },
   "fold3": {
     "train": [
-      "StudyLSM001/Biopsy1_19",
       "StudyLSM001/Biopsy1_20",
       "StudyLSM001/Biopsy1_21",
       "StudyLSM001/Biopsy1_22",
@@ -2872,7 +2869,6 @@
   },
   "fold4": {
     "train": [
-      "StudyLSM001/Biopsy1_19",
       "StudyLSM001/Biopsy1_20",
       "StudyLSM001/Biopsy1_21",
       "StudyLSM001/Biopsy1_22",
@@ -3829,7 +3825,6 @@
   },
   "fold5": {
     "train": [
-      "StudyLSM001/Biopsy1_19",
       "StudyLSM001/Biopsy1_20",
       "StudyLSM001/Biopsy1_21",
       "StudyLSM001/Biopsy1_22",

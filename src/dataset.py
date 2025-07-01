@@ -27,7 +27,7 @@ class MILDataset(Dataset):
         feat_path = self.bag_to_patches[bag_id]
         label = self.bag_labels[bag_id]
 
-        bag_tensor = torch.load(feat_path)
+        bag_tensor = torch.load(feat_path, weights_only=False)
         return bag_tensor, torch.tensor(label, dtype=torch.long), bag_id
 
 def mil_collate(batch):
@@ -68,5 +68,5 @@ class CrossFoldDataset(Dataset):
         bag_id = self.bag_ids[idx]
         feat_path = self.patch_dir / f"{bag_id.split('/')[-1]}.pt"
         label = self.label_map[bag_id]
-        bag_tensor = torch.load(feat_path)
+        bag_tensor = torch.load(feat_path, weights_only=False)
         return bag_tensor, torch.tensor(label, dtype=torch.long), bag_id

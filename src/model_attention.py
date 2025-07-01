@@ -3,6 +3,19 @@ import torch.nn as nn
 import torchvision.models as models
 import torch.nn.functional as F
 
+class FocalLoss(nn.Module):
+    def __init__(self, alpha=1, gamma=2):
+        super(FocalLoss, self).__init__()
+        self.alpha = alpha
+        self.gamma = gamma
+        self.ce = nn.CrossEntropyLoss()
+
+    def forward(self, inputs, targets):
+        ce_loss = self.ce(inputs, targets)
+        pt = torch.exp(-ce_loss)
+        focal_loss = self.alpha * (1 - pt) ** self.gamma * ce_loss
+        return focal_loss
+
 class Attn_Net_Gated(nn.Module):
     def __init__(self, L=512, D=256, dropout=True):
         super(Attn_Net_Gated, self).__init__()
@@ -28,7 +41,17 @@ class AttentionMIL(nn.Module):
     def __init__(self, dropout=0.5):
         super(AttentionMIL, self).__init__()
 
-        self.embedding_dim = 2048
+        self.feature_embed = nn.Sequential(
+            nn.Linear(2048, 1024),
+            nn.ReLU(),
+            nn.LayerNorm(1024),
+            nn.Dropout(dropout),
+            nn.Linear(1024, 512),
+            nn.ReLU(),
+            nn.LayerNorm(512),
+            nn.Dropout(dropout)
+        )
+        self.embedding_dim = 512
         self.attention_module = Attn_Net_Gated(L=self.embedding_dim, D=256, dropout=True)
         self.classifier = nn.Sequential(
             nn.Dropout(dropout),
@@ -41,51 +64,27 @@ class AttentionMIL(nn.Module):
         self.k_sample = 8
         self.n_classes = 2
         self.instance_loss_fn = nn.CrossEntropyLoss()
-        self.instance_classifiers = nn.ModuleList([
-            nn.Linear(self.embedding_dim, 2) for _ in range(self.n_classes)
-        ])
-    
-    @staticmethod
-    def create_positive_targets(length, device):
-        return torch.full((length,), 1, device=device).long()
-
-    @staticmethod
-    def create_negative_targets(length, device):
-        return torch.full((length,), 0, device=device).long()
-    
-    def inst_eval(self, A, h, classifier):
-        A = A.view(-1)  # shape: (N,)
-        top_p_ids = torch.topk(A, self.k_sample)[1]
-        top_n_ids = torch.topk(-A, self.k_sample)[1]
-
-        top_p = h[top_p_ids]
-        top_n = h[top_n_ids]
-
-        all_instances = torch.cat([top_p, top_n], dim=0)
-        all_targets = torch.cat([
-            self.create_positive_targets(self.k_sample, h.device),
-            self.create_negative_targets(self.k_sample, h.device)
-        ])
-
-        logits = classifier(all_instances)
-        instance_loss = self.instance_loss_fn(logits, all_targets)
-
-        return instance_loss
+        self.instance_classifier = nn.Linear(self.embedding_dim, 2)
 
     def forward(self, x, label=None, instance_eval=False):
-        features = x
+        x = x.squeeze(0)
+        x = self.feature_embed(x)  # Project to 512
+        A = self.attention_module(x)  # (N, 1)
+        A = torch.transpose(A, 1, 0)  # (1, N)
+        A = F.softmax(A, dim=1)
 
-        A = self.attention_module(features)  # (B, N, 1)
-        A = torch.transpose(A, 1, 2)         # (B, 1, N)
-        A = F.softmax(A, dim=-1)             # attention weights
+        M = torch.mm(A, x)  # (1, 512)
+        logits = self.classifier(M)  # (1, 2)
 
-        M = torch.bmm(A, features).squeeze(1)  # (B, 512)
-
-        logits = self.classifier(M)            # (B, 2)
-
+        inst_loss = torch.tensor(0.0, device=x.device)
         if instance_eval and label is not None:
-            classifier = self.instance_classifiers[label.item()]
-            inst_loss = self.inst_eval(A[0], features[0], classifier)
-            return logits, A.squeeze(1), inst_loss
+            A_flat = A.view(-1)
+            num_instances = A_flat.size(0)
+            k = min(self.k_sample, num_instances)  # clip k to available instances
+            top_ids = torch.topk(A_flat, k=k).indices
+            inst_feats = x[top_ids]  # (k, 512)
+            inst_targets = torch.full((k,), label.item(), dtype=torch.long, device=x.device)
+            inst_logits = self.instance_classifier(inst_feats)
+            inst_loss = self.instance_loss_fn(inst_logits, inst_targets)
 
-        return logits, A.squeeze(1)
+        return logits, A, inst_loss

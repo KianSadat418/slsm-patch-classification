@@ -8,6 +8,7 @@ import torch.nn.functional as F
 
 from dataset import CrossFoldDataset, mil_collate
 from model_attention import AttentionMIL
+from model_attention import FocalLoss
 from model_maxpool import MaxPoolMIL
 
 
@@ -21,9 +22,9 @@ def get_args():
     parser.add_argument("--model", choices=["attention", "maxpool"], default="attention")
     parser.add_argument("--epochs", type=int, default=1)
     parser.add_argument("--batch-size", type=int, default=1)
-    parser.add_argument("--lr", type=float, default=1e-5)
-    parser.add_argument("--weight-decay", type=float, default=1e-4)
-    parser.add_argument("--dropout", type=float, default=0.5)
+    parser.add_argument("--lr", type=float, default=2e-4)
+    parser.add_argument("--weight-decay", type=float, default=1e-5)
+    parser.add_argument("--dropout", type=float, default=0.25)
     parser.add_argument("--plot-loss", type=Path, help="Optional path to save loss curve plot")
     parser.add_argument("--plot-auc", type=Path, help="Optional path to save AUC curve plot")
     parser.add_argument("--plot-acc", type=Path, help="Optional path to save accuracy curve plot")
@@ -64,7 +65,7 @@ def main():
         model.to(device)
         model.train()
 
-        criterion = torch.nn.CrossEntropyLoss()
+        criterion = FocalLoss(alpha=1, gamma=2)
         optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
 
         from sklearn.metrics import roc_auc_score, roc_curve
@@ -85,14 +86,11 @@ def main():
             train_total = 0
             for bags, labels, _ in train_loader:
                 for bag, label in zip(bags, labels):
-                    N = bag.size(0)
-                    k = int(0.9 * N)
-                    idx = torch.randperm(N)[:k]
-                    bag_sub = bag[idx]
-                    bag = bag_sub.unsqueeze(0).to(device)
+                    bag = bag.unsqueeze(0).to(device)
                     label = label.unsqueeze(0).long().to(device)
-                    logits, _ = model(bag)
-                    loss = criterion(logits, label)
+                    logits, _, inst_loss = model(bag, label=label, instance_eval=True)
+                    bag_loss = criterion(logits, label)
+                    loss = bag_loss + 0.5 * inst_loss
                     optimizer.zero_grad()
                     loss.backward()
                     optimizer.step()
@@ -121,8 +119,9 @@ def main():
                     for bag, label in zip(bags, labels):
                         bag = bag.unsqueeze(0).to(device)
                         label = label.unsqueeze(0).long().to(device)
-                        logits, _ = model(bag)
-                        loss = criterion(logits, label)
+                        logits, _, inst_loss = model(bag, label=label, instance_eval=True)
+                        bag_loss = criterion(logits, label)
+                        loss = bag_loss + 0.5 * inst_loss
                         val_epoch_losses.append(loss.item())
                         val_probs = F.softmax(logits, dim=1)[:, 1]
                         val_preds.extend(val_probs.cpu().tolist())
