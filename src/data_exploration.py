@@ -44,18 +44,29 @@ def main():
     mean_intensities = []
     entropies = []
     bag_detail = []
+    intensities_by_label = {}
+
+    # calculate mean images per biopsy using the prefix before the underscore
+    df["biopsy_prefix"] = df["Biopsy_image_id"].astype(str).str.split("_").str[0]
+    image_counts = (
+        df.groupby(["study_id", "biopsy_prefix"]).size()
+    )
+    mean_images_per_biopsy = float(image_counts.mean()) if len(image_counts) > 0 else 0.0
     for _, row in df.iterrows():
         patch_folder = args.patch_dir / str(row["study_id"]) / str(row["Biopsy_image_id"])
         patches = list(patch_folder.glob("*.png"))
         patch_counts.append(len(patches))
         patch_ints = []
         patch_ents = []
+        label = int(row["label"])
+        intensities_by_label.setdefault(label, [])
         for p in patches:
             m, e = calc_stats(p)
             patch_ints.append(m)
             patch_ents.append(e)
             mean_intensities.append(m)
             entropies.append(e)
+            intensities_by_label[label].append(m)
         if patch_ents:
             bag_detail.append({
                 "biopsy_id": row["Biopsy_image_id"],
@@ -126,6 +137,11 @@ def main():
     plt.savefig(low_detail_plot)
     plt.close()
 
+    mean_intensity_by_class = {
+        str(lbl): float(np.mean(vals)) if len(vals) > 0 else 0.0
+        for lbl, vals in intensities_by_label.items()
+    }
+
     summary = {
         "num_bags": int(len(df)),
         "mean_patches_per_bag": float(df["patch_count"].mean()),
@@ -133,6 +149,8 @@ def main():
         "label_counts": label_counts.to_dict(),
         "mean_patch_intensity": float(np.mean(mean_intensities)) if mean_intensities else 0.0,
         "mean_patch_entropy": float(np.mean(entropies)) if entropies else 0.0,
+        "mean_patch_intensity_by_class": mean_intensity_by_class,
+        "mean_images_per_biopsy": mean_images_per_biopsy,
     }
     summary_path = args.out_dir / "summary.json"
     detail_path = args.out_dir / "bag_detail.json"
@@ -148,6 +166,8 @@ def main():
     print(f"- Avg patches per bag: {summary['mean_patches_per_bag']:.2f} ± {summary['std_patches_per_bag']:.2f}")
     print(f"- Mean patch intensity: {summary['mean_patch_intensity']:.3f}")
     print(f"- Mean patch entropy: {summary['mean_patch_entropy']:.3f}")
+    print(f"- Mean patch intensity by class: {mean_intensity_by_class}")
+    print(f"- Mean images per biopsy: {mean_images_per_biopsy:.2f}")
     print("Check for class imbalance and extremely small or large bags before training.")
 
 
