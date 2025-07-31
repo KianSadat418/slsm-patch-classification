@@ -5,10 +5,10 @@ import json
 import torch
 from torch.utils.data import DataLoader
 import torch.nn.functional as F
+from torch.nn import CrossEntropyLoss
 
 from dataset import CrossFoldDataset, mil_collate
 from model_attention import AttentionMIL
-from model_attention import FocalLoss
 from model_maxpool import MaxPoolMIL
 
 
@@ -22,7 +22,7 @@ def get_args():
     parser.add_argument("--model", choices=["attention", "maxpool"], default="attention")
     parser.add_argument("--epochs", type=int, default=1)
     parser.add_argument("--batch-size", type=int, default=1)
-    parser.add_argument("--lr", type=float, default=2e-4)
+    parser.add_argument("--lr", type=float, default=1e-4)
     parser.add_argument("--weight-decay", type=float, default=1e-5)
     parser.add_argument("--dropout", type=float, default=0.25)
     parser.add_argument("--plot-loss", type=Path, help="Optional path to save loss curve plot")
@@ -63,9 +63,11 @@ def main():
             model = MaxPoolMIL(dropout=args.dropout)
 
         model.to(device)
+        model.instance_loss_fn.cuda(device)
         model.train()
 
-        criterion = FocalLoss(alpha=1, gamma=2)
+        # Use standard CrossEntropyLoss for both bag and instance losses
+        criterion = CrossEntropyLoss()
         optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
 
         from sklearn.metrics import roc_auc_score, roc_curve
@@ -77,59 +79,100 @@ def main():
         train_aucs, val_aucs = [], []
         train_accs, val_accs = [], []
 
+        # Hyperparameters for CLAM loss
+        lambda_inst = 0.3  # Weight for instance-level loss
+        
         for epoch in range(args.epochs):
             model.train()
             epoch_losses = []
+            epoch_bag_losses = []
+            epoch_inst_losses = []
             preds = []
             labels_list = []
             train_correct = 0
             train_total = 0
+            
             for bags, labels, _ in train_loader:
                 for bag, label in zip(bags, labels):
-                    bag = bag.unsqueeze(0).to(device)
-                    label = label.unsqueeze(0).long().to(device)
+                    bag = bag.unsqueeze(0).to(device)  # Add batch dim: (1, N, 2048)
+                    label = label.unsqueeze(0).long().to(device)  # (1,)
+                    
+                    # Forward pass with instance-level supervision
                     logits, _, inst_loss = model(bag, label=label, instance_eval=True)
+                    
+                    # Calculate bag-level loss
                     bag_loss = criterion(logits, label)
-                    loss = bag_loss + 0.5 * inst_loss
-                    optimizer.zero_grad()
+                    
+                    # Total loss is sum of bag loss and weighted instance loss
+                    loss = bag_loss + lambda_inst * inst_loss
+                    
+                    # Backward pass and optimize
                     loss.backward()
+                    
                     optimizer.step()
+                    optimizer.zero_grad()
+                    
+                    # Track losses and metrics
                     epoch_losses.append(loss.item())
+                    epoch_bag_losses.append(bag_loss.item())
+                    epoch_inst_losses.append(inst_loss.item())
+                    
+                    # Calculate predictions and metrics
                     probs = F.softmax(logits, dim=1)[:, 1]
                     preds.extend(probs.detach().cpu().tolist())
                     labels_list.extend(label.cpu().tolist())
                     pred_class = torch.argmax(logits, dim=1)
                     train_correct += (pred_class == label).sum().item()
                     train_total += label.size(0)
+            
+            # Calculate epoch metrics
             train_loss = sum(epoch_losses) / len(epoch_losses)
+            
             try:
                 train_auc = roc_auc_score(labels_list, preds)
             except Exception:
                 train_auc = 0.0
             train_acc = train_correct / train_total if train_total else 0.0
 
+            # Validation phase
             model.eval()
             val_epoch_losses = []
+            val_bag_losses = []
+            val_inst_losses = []
             val_preds = []
             val_labels = []
             val_correct = 0
             val_total = 0
+            
             with torch.no_grad():
                 for bags, labels, _ in val_loader:
                     for bag, label in zip(bags, labels):
                         bag = bag.unsqueeze(0).to(device)
                         label = label.unsqueeze(0).long().to(device)
+                        
+                        # Forward pass with instance-level supervision
                         logits, _, inst_loss = model(bag, label=label, instance_eval=True)
+                        
+                        # Calculate losses
                         bag_loss = criterion(logits, label)
-                        loss = bag_loss + 0.5 * inst_loss
+                        loss = bag_loss + lambda_inst * inst_loss
+                        
+                        # Track losses and metrics
                         val_epoch_losses.append(loss.item())
+                        val_bag_losses.append(bag_loss.item())
+                        val_inst_losses.append(inst_loss.item())
+                        
+                        # Calculate predictions and metrics
                         val_probs = F.softmax(logits, dim=1)[:, 1]
                         val_preds.extend(val_probs.cpu().tolist())
                         val_labels.extend(label.cpu().tolist())
                         val_pred_class = torch.argmax(logits, dim=1)
                         val_correct += (val_pred_class == label).sum().item()
                         val_total += label.size(0)
+            
+            # Calculate validation metrics
             val_loss = sum(val_epoch_losses) / len(val_epoch_losses)
+            
             try:
                 val_auc = roc_auc_score(val_labels, val_preds)
             except Exception:

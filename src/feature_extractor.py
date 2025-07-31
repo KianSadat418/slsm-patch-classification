@@ -26,7 +26,8 @@ def extract_features_from_folder(patch_folder, model, transform):
         img = Image.open(p).convert("RGB")
         img_tensor = transform(img).unsqueeze(0).to(device)
         with torch.no_grad():
-            feat = model(img_tensor).squeeze(0).cpu()  # [2048]
+            feat_map = model(img_tensor)
+            feat = torch.nn.functional.adaptive_avg_pool2d(feat_map, 1).view(-1).cpu()
         feats.append(feat)
 
     return torch.stack(feats)  # [N_patches, 2048]
@@ -35,8 +36,8 @@ def main():
     args = get_args()
 
     # Load ResNet50 and remove classification head
-    model = models.resnet50(pretrained=True)
-    model.fc = torch.nn.Identity()
+    whole = models.resnet50(pretrained=True)
+    model = torch.nn.Sequential(*list(whole.children())[:7])
     model.to(device).eval()
 
 
